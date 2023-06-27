@@ -1,0 +1,90 @@
+/* Website Font Size */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+
+$app-primary-font: "Montserrat", sans-serif;
+$app-secondary-font: "Roboto", sans-serif;
+
+/* Website Font Size */
+
+$app-heading-one: 2.5rem;
+$app-heading-two: 2rem;
+$app-heading-three: 1.5rem;
+$app-text-size: 1.125rem;
+$app-text-size-xl: 1.8rem;
+
+$app-heading-one-tablet: 2.5rem;
+$app-heading-two-tablet: 2rem;
+$app-heading-three-tablet: 1.5rem;
+
+$app-heading-one-desktop: 3rem;
+$app-heading-two-desktop: 2rem;
+$app-heading-three-desktop: 1rem;
+
+$app-heading-one-desktop-large: 6rem;
+$app-heading-two-desktop-large: 5rem;
+$app-heading-three-desktop-large: 4rem;
+
+/* Website Color */
+
+$app-corporate-color: #003da5;
+$app-corporate-color-2: #ffcb03;
+$app-supporting-color: #d9d9d9;
+$app-supporting-color-2: #858383;
+
+/* Website Fonts Color */
+
+$app-primary-fonts-color: #003da5;
+$app-secondary-fonts-color: #858383;
+$app-secondary-fonts-color-2: #f5f5f5;
+$app-secondary-fonts-color-3: #c6c3c3;
+$app-secondary-fonts-color-4: #ffcb03;
+$app-secondary-fonts-color-5: #ffffff;
+$app-secondary-fonts-color-50: #ffffff;
+
+/* Website Background */
+
+$app-bg: #ffffff;
+
+/* Website Button Color */
+
+$app-button-primary-color: #003da5;
+$app-button-secondary-color: #ffcb03;
+
+/* Website Input Color */
+
+$app-input-primary-color: #c6c3c3;
+
+/* Website Nav Color */
+
+$app-navbar-color: #003da5;
+
+/* Website MenuTop Color */
+
+$app-menuTop-color: #003da5;
+
+/* Website Icons Color */
+
+$app-icon-color: #003da5;
+
+/* Website Bg-Icons Color */
+
+$app-bg-icon-color: #ffcb03;
+
+/* button border-radius */
+
+$app-button-border-radius: 5px;
+
+/* button border-color */
+
+$app-button-color: transparent;
+
+/* button padding */
+
+$app-button-padding: 10px 20px;
+$app-button-padding-phone-large: 20px 30px;
+
+/* Website lin Color */
+
+$app-line-color: #ffcb03;

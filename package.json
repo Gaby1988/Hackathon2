@@ -1,0 +1,44 @@
+{
+  "name": "hackathon",
+  "version": "3.0.0",
+  "description": "project template for the React-Express-MySQL cursus in Wild Code School",
+  "homepage": "https://github.com/wildcodeschool/js-template-fullstack#readme",
+  "bugs": {
+    "url": "https://github.com/wildcodeschool/js-template-fullstack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildcodeschool/js-template-fullstack.git"
+  },
+  "config": {
+    "cli": "npm"
+  },
+  "scripts": {
+    "postinstall": "cross-env-shell \"husky install && cd ./frontend && $npm_package_config_cli install && cd ../backend && $npm_package_config_cli install\"",
+    "migrate": "cd ./backend && node migrate.js",
+    "datavalues": "cd ./backend && node datavalues.js",
+    "foreignkey": "cd ./backend && node foreignkey.js",
+    "dev": "cross-env-shell 'concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"$npm_package_config_cli:dev-*\"'",
+    "dev-front": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run dev\"",
+    "dev-back": "cross-env-shell \"cd ./backend && $npm_package_config_cli run dev\"",
+    "lint": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run lint && cd ../backend && $npm_package_config_cli run lint\"",
+    "fix": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run fix && cd ../backend && $npm_package_config_cli run fix\""
+  },
+  "keywords": [],
+  "author": "Wild Code School",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "eslint-import-resolver-node": "^0.3.7"
+  },
+  "dependencies": {
+    "argon2": "^0.27.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-modal": "^3.16.1",
+    "react-toastify": "^9.1.3",
+    "sass": "^1.63.6"
+  }
+}

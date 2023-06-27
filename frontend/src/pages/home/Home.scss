@@ -1,0 +1,208 @@
+@import "../../assets/mixins/mixins.scss";
+
+.mainHome {
+  height: calc(100vh - 45px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  .header {
+    position: relative;
+    display: flex;
+    margin-top: 7rem;
+    width: 100%;
+    @include tablet {
+    }
+
+    .objectif {
+      font-size: $app-text-size;
+      color: $app-corporate-color;
+      font-family: $app-primary-font;
+      // margin-left: 3.5rem;
+      text-align: center;
+      margin-top: 1rem;
+      margin-left: -1rem;
+
+      @include tablet {
+        position: absolute;
+        width: 50%;
+        top: 1.5rem;
+        right: 3rem;
+        font-size: 1.5rem;
+        overflow-wrap: break-word;
+      }
+      @include desktop {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        width: 50%;
+      }
+    }
+
+    .bloc_women {
+      display: flex;
+      width: 100%;
+      @include tablet {
+        width: 60%;
+      }
+    }
+
+    .decorative_rectangle {
+      display: flex;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      background-color: $app-corporate-color;
+      height: 3rem;
+      width: 80%;
+      margin-top: 2rem;
+      @include tablet {
+        height: 5rem;
+        width: 65%;
+        @include desktop {
+          width: 30rem;
+          height: 6rem;
+          margin-top: 6rem;
+        }
+      }
+    }
+
+    .desk_women {
+      position: absolute;
+      height: 80%;
+      width: 150px;
+      margin-top: 0.5rem;
+
+      @include tablet {
+        width: 290px;
+        height: 135px;
+        margin-top: -1rem;
+      }
+
+      @include desktop {
+        width: 450px;
+        height: 175px;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .instructions {
+    text-align: center;
+    font-size: $app-text-size;
+    width: 20rem;
+    margin-left: 1.5rem;
+    margin-top: 4rem;
+    font-family: $app-secondary-font;
+
+    @include tablet {
+      margin-left: 6.5rem;
+      font-size: $app-heading-three-tablet;
+      width: 34rem;
+      margin-top: 2rem;
+    }
+
+    @include desktop {
+      margin-left: 2.5rem;
+      font-size: 2rem;
+      width: 77rem;
+      margin-top: 4rem;
+    }
+  }
+
+  .button_debuter_formation {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    @include tablet {
+      margin-top: -3rem;
+    }
+    @include desktop {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .button_Debuter_Formation {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: $app-corporate-color;
+    border-radius: 10px;
+    background-color: $app-corporate-color-2;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+
+    @include tablet {
+      padding: 0 40px;
+      font-size: 1.5rem;
+      margin-top: 5rem;
+    }
+
+    @include desktop {
+      margin-left: 35rem;
+    }
+  }
+
+  .presenter {
+    display: flex;
+    margin-top: 3rem;
+
+    @include tablet {
+      margin-top: -3.5rem;
+    }
+  }
+
+  .presenter_img {
+    height: 80px;
+    width: 135px;
+
+    @include tablet {
+      height: 150px;
+      width: 150px;
+      margin-top: 11%;
+    }
+
+    @include desktop {
+      height: 232px;
+      width: 256px;
+      margin-top: 77px;
+    }
+  }
+
+  .text_presenter {
+    font-size: $app-text-size;
+    font-family: $app-secondary-font;
+    width: 100%;
+
+    @include tablet {
+      margin-top: 4.5rem;
+      font-size: $app-heading-three-tablet;
+      width: 30rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+      width: 60rem;
+      margin-top: 6rem;
+    }
+  }
+
+  .bloc_presenter {
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    @include tablet {
+      margin-top: 4%;
+    }
+  }
+
+  .word_ici {
+    color: $app-corporate-color-2;
+    margin-left: 0.4rem;
+  }
+}
