@@ -1,24 +1,59 @@
 INSERT INTO 
-    amdmin (email, password)
+    users(role_id, level, email)
 VALUES 
-('gabyOne@gmail.com', 1234),
+(1, 1, 'gabyOne@gmail.com'),
+(1, 1, 'laetiTwo@gmail.com'),
+(1, 1, 'eleaThree@gmail.com');
 
 
-INSERT INTO 
-  phones (brand, model, ram, stockage, state, ponderation, operatingSystem)
-VALUES 
-('Iphone', 'iphone X', '3GB', '64GB', 'Hs', '', 'IOS' )
-('Iphone', 'iPhone SE', '3GB', '64GB', 'Réparable', '', 'IOS' )
-('Iphone', 'iPhone 11', '3GB', '128GB', 'Reconditionné', '', 'IOS' )
-('Samsung', 'Galaxy S9', '4GB', '64GB', 'Reconditionable', '', 'Android' )
-('Samsung', 'Galaxy Note 9', '6GB', '128GB', 'Bloqué', '', 'Android' )
-('Samsung', 'Galaxy S10e', '6GB', '128GB', 'Reconditionné', '', 'Android' )
-('Huawei', 'Mate 20 Pro', '8GB', '128GB', 'Hs', '', 'Android' )
-('Huawei', 'P20 Pro', '6GB', '128GB', 'Reconditionable', '', 'Android' )
-('Huawei', 'P30 Pro', '6GB', '128GB', 'Réparable', '', 'Android' )
-('Oppo', 'Find X2 Pro', '12GB', '256GB', 'Hs', '', 'Android' )
-('Oppo', 'Reno 5 Pro', '8GB', '128GB', 'Reconditionable', '', 'Android' )
-('Oppo', 'A92', '8GB', '128GB', 'Reconditionné', '', 'Android' )
-('Xiaomi', 'Redmi Note 11', '4GB', '64GB', 'Bloqué', '', 'Android' )
-('Xiaomi', 'Poco X3 Pro', '6GB', '128GB', 'Reconditionable', '', 'Android' )
-('Xiaomi', 'Mi 11 Lite', '6GB', '128GB', 'Bon', '', 'Android' )
+  INSERT INTO 
+     `usersTutorials` (user_id, tutorial_id, step_id, fl_status)
+     VALUES
+(1, 1, 1, 0),
+(1, 2, 2, 0),
+(1, 3, 3, 0),
+(2, 1, 4, 0),
+(2, 2, 5, 0),
+(2, 3, 6, 0),
+(3, 1, 7, 0),
+(3, 2, 8, 0),
+(3, 3, 9, 0),
+(1, 4, 10, 0),
+(1, 5, 11, 0),
+(1, 6, 12, 0),
+(1, 7, 13, 0),
+(1, 8, 14, 0),
+(1, 9, 15, 0),
+(1, 10, 16, 0),
+(1, 11, 17, 0),
+(1, 12, 18, 0),
+(1, 13, 19, 0),
+(1, 14, 20, 0),
+(1, 15, 21, 0),
+(1, 16, 22, 0),
+(2, 4, 23, 0),
+(2, 5, 24, 0),
+(2, 6, 25, 0),
+(2, 7, 26, 0),
+(2, 8, 27, 0),
+(2, 9, 28, 0),
+(2, 10, 29, 0),
+(2, 11, 30, 0),
+(2, 12, 31, 0),
+(2, 13, 32, 0),
+(2, 14, 33, 0),
+(2, 15, 34, 0),
+(2, 16, 35, 0),
+(3, 4, 36, 0), 
+(3, 5, 37, 0), 
+(3, 6, 38, 0), 
+(3, 7, 39, 0), 
+(3, 8, 40, 0), 
+(3, 9, 41, 0), 
+(3, 10, 42, 0), 
+(3, 11, 43, 0), 
+(3, 12, 44, 0), 
+(3, 13, 45, 0), 
+(3, 14, 46, 0), 
+(3, 15, 47, 0), 
+(3, 16, 48, 0);

@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
 import { Outlet } from "react-router-dom";
+import MenuTop from "../components/menuTop/MenuTop";
+import Footer from "../components/footer/Footer";
 import { CreateTutorialProvider } from "../contexts/CreateTutorialContext";
 import NameMenuTopContext from "../contexts/NameMenuTopContext";
 
