@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import backArrow from "../assets/icons/backarrow-icon.svg";
-import "../../styles/App.scss";
+import backArrow from "../assets/pictures/arrow.png";
 
 function BackArrow() {
   const navigate = useNavigate();
@@ -14,6 +13,7 @@ function BackArrow() {
           navigate(-1);
         }}
       >
+        <p>Retour</p>
         <img
           className="arrow"
           src={backArrow}

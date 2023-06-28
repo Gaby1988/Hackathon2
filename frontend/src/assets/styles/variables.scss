@@ -9,17 +9,26 @@ $app-secondary-font: "Roboto", sans-serif;
 /* Website color*/
 $app-primary-font-color: #04acb0;
 $app-secondary-font-color: #ffab1e;
-$app-supporting-color: #272350;
-$app-supporting-color2: black;
+$app-supporting-color2: #eeeeee;
 
 /* Website Background */
 $app-bg-color: white;
-$app-bg-color-button: #04acb0;
-$app-text-button: white;
+$app-bg-color-button: #000000;
+$app-color-button: white;
+$app-text-p: black;
 
-$app-bg: #ffffff;
+/* Media query */
+$app-mobile: 320px;
+$app-tablet: 768px;
+$app-desktop: 1024px;
+$app-desktop-medium: 1440px;
+$app-desktop-large: 1680px;
 
-/* Website Button Color */
+/* Website Font Size */
+$font-size-text-phone: 14px;
+$font-size-text-phone-home: 18px;
+$font-size-text-tablet: 25px;
+$font-size-list-burger-tablet: 38px;
 
 @mixin font-title-phone {
   font-family: $app-secondary-font;
@@ -54,18 +63,27 @@ $app-bg: #ffffff;
 @mixin font-subheading-desktop {
   font-family: $app-secondary-font;
   font-weight: normal;
-  color: $app-primary-font-color;
+  color: $app-text-p;
 }
 
-$app-menuTop-color: #003da5;
+@mixin font-text-phone {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  font-size: $font-size-text-phone;
+  color: $app-text-p;
+}
 
-/* Website Icons Color */
+@mixin font-text-tablet-desktop {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  font-size: $font-size-text-tablet;
+}
 
-$app-icon-color: #003da5;
+/* Website Buttons */
 
 @mixin primary-button-phone {
-  background-color: $app-bg-color-button;
-  color: $app-text-button;
+  background-color: $app-primary-font-color;
+  color: $app-color-button;
   border-style: none;
   border: solid 2px $app-primary-font-color;
   border-radius: 6px;
@@ -74,7 +92,7 @@ $app-icon-color: #003da5;
   font-size: $font-size-text-phone;
   font-family: $app-primary-font;
 
-  $app-bg-icon-color: #ffcb03;
+  cursor: pointer;
 
   &:hover {
     border: solid 2px $app-bg-color-button;
@@ -82,8 +100,8 @@ $app-icon-color: #003da5;
 }
 
 @mixin primary-button-tablet {
-  background-color: $app-bg-color-button;
-  color: $app-text-button;
+  background-color: $app-primary-font-color;
+  color: $app-color-button;
   border-style: none;
   border: solid 2px $app-primary-font-color;
   border-radius: 6px;
@@ -91,20 +109,17 @@ $app-icon-color: #003da5;
   height: 4rem;
   font-size: $font-size-text-tablet;
   font-family: $app-primary-font;
-  /* button border-radius */
 
-  $app-button-border-radius: 5px;
-
-  /* button border-color */
+  cursor: pointer;
 
   &:hover {
-    border: solid 2px $app-bg-color-button;
+    border: solid 2px $app-primary-font-color;
   }
 }
 
 @mixin primary-button-desktop {
-  background-color: $app-bg-color-button;
-  color: $app-text-button;
+  background-color: $app-primary-font-color;
+  color: $app-color-button;
   border-style: none;
   border: solid 2px $app-primary-font-color;
   border-radius: 6px;
@@ -115,29 +130,10 @@ $app-icon-color: #003da5;
     family: $app-primary-font;
   }
 
-  $app-button-padding: 10px 20px;
-  $app-button-padding-phone-large: 20px 30px;
-
-  &:hover {
-    border: solid 2px $app-bg-color-button;
-  }
-}
-
-@mixin secondary-button-phone {
-  background-color: $app-bg-color-button;
-  color: $app-primary-font-color;
-  border-style: none;
-  border: solid 2px $app-primary-font-color;
-  border-radius: 6px;
-  width: 3rem;
-  height: 1.5rem;
-  font-size: $font-size-text-phone;
-  font-family: $app-primary-font;
-
   cursor: pointer;
 
   &:hover {
-    border: solid 2px $app-bg-color-button;
+    border: solid 2px $app-primary-font-color;
   }
 }
 
@@ -157,8 +153,6 @@ $app-icon-color: #003da5;
   cursor: pointer;
 
   &:hover {
-    background-color: $app-primary-font-color;
-    color: $app-bg-color-button;
-    border: solid 2px $app-bg-color-button;
+    border: solid 2px $app-primary-font-color;
   }
 }
