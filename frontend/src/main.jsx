@@ -6,7 +6,6 @@ import "primereact/resources/themes/lara-light-teal/theme.css";
 import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
-import Child from "./routes/Child";
 import Home from "./pages/home/Home";
 import PageRecap from "./pages/PageRecap";
 

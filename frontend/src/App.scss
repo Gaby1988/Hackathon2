@@ -1,4 +1,4 @@
-@import "../src/assets/styles/variables.scss";
+@import "./assets/styles/variables.scss";
 @import "../src/assets/mixins/mixins.scss";
 
 /* -----------------------------import Pages -------------------------------- */
@@ -39,7 +39,7 @@ h3 {
 }
 
 p {
-  @include font-text-phone;
+ 
 }
 
 input,
@@ -59,7 +59,7 @@ li {
 
 /* button */
 .primary-button {
-  @include primary-button-phone;
+ 
 }
 
 @media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
@@ -72,7 +72,7 @@ li {
   }
 
   p {
-    @include font-text-tablet-desktop;
+    
   }
 
   .primary-button {
