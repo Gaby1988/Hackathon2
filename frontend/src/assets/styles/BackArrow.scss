@@ -1,0 +1,17 @@
+.back-arrow-container {
+  height: 2rem;
+  width: 3.5rem;
+  margin: 2rem 3rem;
+  align-self: flex-start;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .back-arrow-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+}

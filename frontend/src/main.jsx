@@ -6,6 +6,7 @@ import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
 import Child from "./routes/Child";
 import Home from "./pages/home/Home";
+import PageRecap from "./pages/PageRecap";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/", // chemin/formationexemple
         element: <Home />,
+      },
+      {
+        path: "/phone-recap",
+        element: <PageRecap />,
       },
     ],
   },
