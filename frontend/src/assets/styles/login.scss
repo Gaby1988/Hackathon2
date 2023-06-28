@@ -1,0 +1,37 @@
+.login-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../pictures/Bulles.png");
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 43vh;
+    margin-top: 2rem;
+    width: 40%;
+
+    label {
+      width: 100%;
+    }
+
+    .input-text {
+      width: 100%;
+    }
+    .p-password {
+      width: 100%;
+    }
+
+    .p-inputtext {
+      width: 100%;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}

@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.scss";
+import "primereact/resources/themes/lara-light-teal/theme.css";
+import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
 import Child from "./routes/Child";
