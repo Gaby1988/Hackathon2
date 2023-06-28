@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 function AddPhone() {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
@@ -8,12 +7,9 @@ function AddPhone() {
   const [ram, setRam] = useState("");
   const [price, setPrice] = useState(0);
   const [basePrice, setBasePrice] = useState(0);
- 
 
-  console.info(data);
   const calculatePrice = () => {
     setBasePrice(500); // Prix de base
-
     switch (brand) {
     case "Apple":
       setBasePrice((prev) => (prev += 200));
@@ -33,7 +29,6 @@ function AddPhone() {
     default:
       break;
     }
-
     switch (model) {
     case "'iPhone X' || model === 'Galaxy S9' || model === 'Oppo Reno 4' || model === 'Huawei P30'":
       setBasePrice((prev) => (prev += 100));
@@ -72,7 +67,6 @@ function AddPhone() {
     default:
       break;
     }
-
     switch (condition) {
     case "Excellent":
       setBasePrice((prev) => (prev += 100));
@@ -89,7 +83,6 @@ function AddPhone() {
     default:
       break;
     }
-
     switch (ram) {
     case "2GB":
       setBasePrice((prev) => (prev += 25));
@@ -106,10 +99,8 @@ function AddPhone() {
     default:
       break;
     }
-
     setPrice(basePrice);
   };
-
   return (
     <div>
       <h2>Phone Price Calculator</h2>
@@ -215,5 +206,4 @@ function AddPhone() {
     </div>
   );
 }
-
 export default AddPhone;
