@@ -57,6 +57,19 @@ $app-bg: #ffffff;
   color: $app-primary-font-color;
 }
 
+@mixin font-text-phone {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  font-size: $font-size-text-phone;
+  color: $app-supporting-color2;
+}
+
+@mixin font-text-tablet-desktop {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  font-size: $font-size-text-tablet;
+}
+
 $app-menuTop-color: #003da5;
 
 /* Website Icons Color */
