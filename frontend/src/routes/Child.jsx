@@ -1,3 +1,4 @@
+import React from "react";
 import { useMemo, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { CreateTutorialProvider } from "../contexts/CreateTutorialContext";
@@ -14,9 +15,7 @@ function Child() {
         )}
       >
         <CreateTutorialProvider>
-          <MenuTop />
           <Outlet />
-          <Footer />
         </CreateTutorialProvider>
       </NameMenuTopContext.Provider>
     </div>
