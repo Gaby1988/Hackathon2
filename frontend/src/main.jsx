@@ -8,7 +8,6 @@ import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
 import Child from "./routes/Child";
 import Home from "./pages/home/Home";
-import Login from "./pages/home/login";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +17,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
       },
     ],
   },

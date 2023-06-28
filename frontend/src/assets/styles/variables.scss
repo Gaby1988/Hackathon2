@@ -17,18 +17,9 @@ $app-bg-color: white;
 $app-bg-color-button: #04acb0;
 $app-text-button: white;
 
-/* Media query */
-$app-mobile: 320px;
-$app-tablet: 768px;
-$app-desktop: 1024px;
-$app-desktop-medium: 1440px;
-$app-desktop-large: 1680px;
+$app-bg: #ffffff;
 
-/* Website Font Size */
-$font-size-text-phone: 14px;
-$font-size-text-phone-home: 18px;
-$font-size-text-tablet: 25px;
-$font-size-list-burger-tablet: 38px;
+/* Website Button Color */
 
 @mixin font-title-phone {
   font-family: $app-secondary-font;
@@ -66,20 +57,11 @@ $font-size-list-burger-tablet: 38px;
   color: $app-primary-font-color;
 }
 
-@mixin font-text-phone {
-  font-family: $app-secondary-font;
-  font-weight: normal;
-  font-size: $font-size-text-phone;
-  color: $app-supporting-color2;
-}
+$app-menuTop-color: #003da5;
 
-@mixin font-text-tablet-desktop {
-  font-family: $app-secondary-font;
-  font-weight: normal;
-  font-size: $font-size-text-tablet;
-}
+/* Website Icons Color */
 
-/* Website Buttons */
+$app-icon-color: #003da5;
 
 @mixin primary-button-phone {
   background-color: $app-bg-color-button;
@@ -92,7 +74,7 @@ $font-size-list-burger-tablet: 38px;
   font-size: $font-size-text-phone;
   font-family: $app-primary-font;
 
-  cursor: pointer;
+  $app-bg-icon-color: #ffcb03;
 
   &:hover {
     border: solid 2px $app-bg-color-button;
@@ -109,8 +91,11 @@ $font-size-list-burger-tablet: 38px;
   height: 4rem;
   font-size: $font-size-text-tablet;
   font-family: $app-primary-font;
+  /* button border-radius */
 
-  cursor: pointer;
+  $app-button-border-radius: 5px;
+
+  /* button border-color */
 
   &:hover {
     border: solid 2px $app-bg-color-button;
@@ -130,7 +115,8 @@ $font-size-list-burger-tablet: 38px;
     family: $app-primary-font;
   }
 
-  cursor: pointer;
+  $app-button-padding: 10px 20px;
+  $app-button-padding-phone-large: 20px 30px;
 
   &:hover {
     border: solid 2px $app-bg-color-button;
