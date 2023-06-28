@@ -1,4 +1,6 @@
+import React from "react";
+
 function Home() {
-  return <main className="mainHome"></main>;
+  return <>coucou</>;
 }
 export default Home;

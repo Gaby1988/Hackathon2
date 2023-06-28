@@ -6,85 +6,180 @@
 $app-primary-font: "Montserrat", sans-serif;
 $app-secondary-font: "Roboto", sans-serif;
 
-/* Website Font Size */
-
-$app-heading-one: 2.5rem;
-$app-heading-two: 2rem;
-$app-heading-three: 1.5rem;
-$app-text-size: 1.125rem;
-$app-text-size-xl: 1.8rem;
-
-$app-heading-one-tablet: 2.5rem;
-$app-heading-two-tablet: 2rem;
-$app-heading-three-tablet: 1.5rem;
-
-$app-heading-one-desktop: 3rem;
-$app-heading-two-desktop: 2rem;
-$app-heading-three-desktop: 1rem;
-
-$app-heading-one-desktop-large: 6rem;
-$app-heading-two-desktop-large: 5rem;
-$app-heading-three-desktop-large: 4rem;
-
-/* Website Color */
-
-$app-corporate-color: #003da5;
-$app-corporate-color-2: #ffcb03;
-$app-supporting-color: #d9d9d9;
-$app-supporting-color-2: #858383;
-
-/* Website Fonts Color */
-
-$app-primary-fonts-color: #003da5;
-$app-secondary-fonts-color: #858383;
-$app-secondary-fonts-color-2: #f5f5f5;
-$app-secondary-fonts-color-3: #c6c3c3;
-$app-secondary-fonts-color-4: #ffcb03;
-$app-secondary-fonts-color-5: #ffffff;
-$app-secondary-fonts-color-50: #ffffff;
+/* Website color*/
+$app-primary-font-color: blue;
+$app-secondary-font-color: aqua;
+$app-supporting-color: #fffcf6;
+$app-supporting-color2: #eeeeee;
 
 /* Website Background */
+$app-bg-color: white;
+$app-bg-color-button: #000000;
 
-$app-bg: #ffffff;
+/* Media query */
+$app-mobile: 320px;
+$app-tablet: 768px;
+$app-desktop: 1024px;
+$app-desktop-medium: 1440px;
+$app-desktop-large: 1680px;
 
-/* Website Button Color */
+/* Website Font Size */
+$font-size-text-phone: 14px;
+$font-size-text-phone-home: 18px;
+$font-size-text-tablet: 25px;
+$font-size-list-burger-tablet: 38px;
 
-$app-button-primary-color: #003da5;
-$app-button-secondary-color: #ffcb03;
+@mixin font-title-phone {
+  font-family: $app-secondary-font;
+  color: $app-primary-font-color;
+  font-weight: 600;
+}
 
-/* Website Input Color */
+@mixin font-title-tablet {
+  font-family: $app-secondary-font;
+  color: $app-primary-font-color;
+  font-weight: 600;
+}
 
-$app-input-primary-color: #c6c3c3;
+@mixin font-title-desktop {
+  font-family: $app-secondary-font;
+  color: $app-primary-font-color;
+  font-weight: 600;
+}
 
-/* Website Nav Color */
+@mixin font-subheading-phone {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  color: $app-supporting-color2;
+}
 
-$app-navbar-color: #003da5;
+@mixin font-subheading-tablet {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  color: $app-supporting-color2;
+}
 
-/* Website MenuTop Color */
+@mixin font-subheading-desktop {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  color: $app-supporting-color2;
+}
 
-$app-menuTop-color: #003da5;
+@mixin font-text-phone {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  font-size: $font-size-text-phone;
+  color: $app-supporting-color2;
+}
 
-/* Website Icons Color */
+@mixin font-text-tablet-desktop {
+  font-family: $app-secondary-font;
+  font-weight: normal;
+  font-size: $font-size-text-tablet;
+}
 
-$app-icon-color: #003da5;
+/* Website Buttons */
 
-/* Website Bg-Icons Color */
+@mixin primary-button-phone {
+  background-color: $app-bg-color-button;
+  color: $app-primary-font-color;
+  border-style: none;
+  border: solid 2px $app-primary-font-color;
+  border-radius: 6px;
+  width: 7rem;
+  height: 3rem;
+  font-size: $font-size-text-phone;
+  font-family: $app-primary-font;
 
-$app-bg-icon-color: #ffcb03;
+  cursor: pointer;
 
-/* button border-radius */
+  &:hover {
+    background-color: $app-primary-font-color;
+    color: $app-bg-color-button;
+    border: solid 2px $app-bg-color-button;
+  }
+}
 
-$app-button-border-radius: 5px;
+@mixin primary-button-tablet {
+  background-color: $app-bg-color-button;
+  color: $app-primary-font-color;
+  border-style: none;
+  border: solid 2px $app-primary-font-color;
+  border-radius: 6px;
+  width: 11rem;
+  height: 4rem;
+  font-size: $font-size-text-tablet;
+  font-family: $app-primary-font;
 
-/* button border-color */
+  cursor: pointer;
 
-$app-button-color: transparent;
+  &:hover {
+    background-color: $app-primary-font-color;
+    color: $app-bg-color-button;
+    border: solid 2px $app-bg-color-button;
+  }
+}
 
-/* button padding */
+@mixin primary-button-desktop {
+  background-color: $app-bg-color-button;
+  color: $app-primary-font-color;
+  border-style: none;
+  border: solid 2px $app-primary-font-color;
+  border-radius: 6px;
+  width: 15rem;
+  height: 4rem;
+  font: {
+    size: $font-size-text-tablet;
+    family: $app-primary-font;
+  }
 
-$app-button-padding: 10px 20px;
-$app-button-padding-phone-large: 20px 30px;
+  cursor: pointer;
 
-/* Website lin Color */
+  &:hover {
+    background-color: $app-primary-font-color;
+    color: $app-bg-color-button;
+    border: solid 2px $app-bg-color-button;
+  }
+}
 
-$app-line-color: #ffcb03;
+@mixin secondary-button-phone {
+  background-color: $app-bg-color-button;
+  color: $app-primary-font-color;
+  border-style: none;
+  border: solid 2px $app-primary-font-color;
+  border-radius: 6px;
+  width: 3rem;
+  height: 1.5rem;
+  font-size: $font-size-text-phone;
+  font-family: $app-primary-font;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $app-primary-font-color;
+    color: $app-bg-color-button;
+    border: solid 2px $app-bg-color-button;
+  }
+}
+
+@mixin primary-secondary-tablet-desktop {
+  background-color: $app-bg-color-button;
+  color: $app-primary-font-color;
+  border-style: none;
+  border: solid 2px $app-primary-font-color;
+  border-radius: 6px;
+  width: 6rem;
+  height: 3rem;
+  font: {
+    size: $font-size-text-tablet;
+    family: $app-primary-font;
+  }
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $app-primary-font-color;
+    color: $app-bg-color-button;
+    border: solid 2px $app-bg-color-button;
+  }
+}
