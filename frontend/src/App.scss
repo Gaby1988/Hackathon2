@@ -7,3 +7,92 @@
 
 
 /* -----------------------------import components -------------------------------- */
+@import "../src/assets/styles/login.scss";
+@import "../src/assets/styles/navbar.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5;
+  background-color: $app-bg-color;
+}
+
+h1 {
+  font-family: $app-secondary-font;
+}
+
+h2 {
+  @include font-title-phone;
+}
+
+h3 {
+  @include font-subheading-phone;
+}
+
+p {
+  @include font-text-phone;
+}
+
+input,
+label,
+textarea,
+select,
+button,
+ul,
+li {
+  font-family: $app-secondary-font;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+/* button */
+.primary-button {
+  @include primary-button-phone;
+}
+
+@media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
+  h2 {
+    @include font-title-tablet;
+  }
+
+  h3 {
+    @include font-subheading-tablet;
+  }
+
+  p {
+    @include font-text-tablet-desktop;
+  }
+
+  .primary-button {
+    @include primary-button-tablet;
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  h2 {
+    @include font-title-desktop;
+  }
+
+  h3 {
+    @include font-subheading-desktop;
+  }
+
+  p {
+    @include font-text-tablet-desktop;
+  }
+
+  .primary-button {
+    @include primary-button-desktop;
+  }
+}
