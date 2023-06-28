@@ -24,10 +24,15 @@ function Login() {
 
   return (
     <div className="login-container">
+      <h2>SE CONNECTER</h2>
       <form>
         <label>
           UserName: <br />
-          <InputText value={userName} onChange={handleChangeMail} />
+          <InputText
+            className="input-text"
+            value={userName}
+            onChange={handleChangeMail}
+          />
         </label>
         <label>
           Mot de passe : <br />
@@ -38,7 +43,9 @@ function Login() {
             toggleMask
           />
         </label>
-        <button type="submit">connexion</button>
+        <button className="primary-button" type="submit">
+          connexion
+        </button>
       </form>
     </div>
   );

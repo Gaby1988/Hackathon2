@@ -7,14 +7,15 @@ $app-primary-font: "Montserrat", sans-serif;
 $app-secondary-font: "Roboto", sans-serif;
 
 /* Website color*/
-$app-primary-font-color: blue;
-$app-secondary-font-color: aqua;
-$app-supporting-color: #fffcf6;
+$app-primary-font-color: #04acb0;
+$app-secondary-font-color: #ffab1e;
+$app-supporting-color: #272350;
 $app-supporting-color2: black;
 
 /* Website Background */
 $app-bg-color: white;
-$app-bg-color-button: #000000;
+$app-bg-color-button: #04acb0;
+$app-text-button: white;
 
 /* Media query */
 $app-mobile: 320px;
@@ -31,38 +32,38 @@ $font-size-list-burger-tablet: 38px;
 
 @mixin font-title-phone {
   font-family: $app-secondary-font;
-  color: $app-primary-font-color;
+  color: $app-secondary-font-color;
   font-weight: 600;
 }
 
 @mixin font-title-tablet {
   font-family: $app-secondary-font;
-  color: $app-primary-font-color;
+  color: $app-secondary-font-color;
   font-weight: 600;
 }
 
 @mixin font-title-desktop {
   font-family: $app-secondary-font;
-  color: $app-primary-font-color;
+  color: $app-secondary-font-color;
   font-weight: 600;
 }
 
 @mixin font-subheading-phone {
   font-family: $app-secondary-font;
   font-weight: normal;
-  color: $app-supporting-color2;
+  color: $app-primary-font-color;
 }
 
 @mixin font-subheading-tablet {
   font-family: $app-secondary-font;
   font-weight: normal;
-  color: $app-supporting-color2;
+  color: $app-primary-font-color;
 }
 
 @mixin font-subheading-desktop {
   font-family: $app-secondary-font;
   font-weight: normal;
-  color: $app-supporting-color2;
+  color: $app-primary-font-color;
 }
 
 @mixin font-text-phone {
@@ -82,7 +83,7 @@ $font-size-list-burger-tablet: 38px;
 
 @mixin primary-button-phone {
   background-color: $app-bg-color-button;
-  color: $app-primary-font-color;
+  color: $app-text-button;
   border-style: none;
   border: solid 2px $app-primary-font-color;
   border-radius: 6px;
@@ -94,15 +95,13 @@ $font-size-list-burger-tablet: 38px;
   cursor: pointer;
 
   &:hover {
-    background-color: $app-primary-font-color;
-    color: $app-bg-color-button;
     border: solid 2px $app-bg-color-button;
   }
 }
 
 @mixin primary-button-tablet {
   background-color: $app-bg-color-button;
-  color: $app-primary-font-color;
+  color: $app-text-button;
   border-style: none;
   border: solid 2px $app-primary-font-color;
   border-radius: 6px;
@@ -114,15 +113,13 @@ $font-size-list-burger-tablet: 38px;
   cursor: pointer;
 
   &:hover {
-    background-color: $app-primary-font-color;
-    color: $app-bg-color-button;
     border: solid 2px $app-bg-color-button;
   }
 }
 
 @mixin primary-button-desktop {
   background-color: $app-bg-color-button;
-  color: $app-primary-font-color;
+  color: $app-text-button;
   border-style: none;
   border: solid 2px $app-primary-font-color;
   border-radius: 6px;
@@ -136,8 +133,6 @@ $font-size-list-burger-tablet: 38px;
   cursor: pointer;
 
   &:hover {
-    background-color: $app-primary-font-color;
-    color: $app-bg-color-button;
     border: solid 2px $app-bg-color-button;
   }
 }
@@ -156,8 +151,6 @@ $font-size-list-burger-tablet: 38px;
   cursor: pointer;
 
   &:hover {
-    background-color: $app-primary-font-color;
-    color: $app-bg-color-button;
     border: solid 2px $app-bg-color-button;
   }
 }
