@@ -6,7 +6,6 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
-import Child from "./routes/Child";
 import Home from "./pages/home/Home";
 import Login from "./pages/home/login";
 
@@ -22,16 +21,6 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
-      },
-    ],
-  },
-  {
-    path: "/",
-    element: <Child />,
-    children: [
-      {
-        path: "/", // chemin/formationexemple
-        element: <Home />,
       },
     ],
   },

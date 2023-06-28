@@ -1,13 +1,11 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../components/navbar/NavBar";
-import Footer from "../components/footer/Footer";
+import NavBar from "../component/NavBar";
 
 function Root() {
   return (
     <div>
       <NavBar />
       <Outlet />
-      <Footer />
     </div>
   );
 }
