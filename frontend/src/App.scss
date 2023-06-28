@@ -1,34 +1,6 @@
 @import "../src/assets/styles/variables.scss";
 @import "../src/assets/mixins/mixins.scss";
 
-/* -----------------------------import Pages -------------------------------- */
-
-@import "../src/pages/formation/Formation.scss";
-@import "../src/pages/tutorialChoice/TutorialChoice.scss";
-@import "../src/pages/home/Home.scss";
-@import "../src/pages/levelUser/LevelUser.scss";
-@import "../src/pages/login/Login.scss";
-@import "../src/pages/register/Register.scss";
-@import "../src/pages/parcours/Parcours.scss";
-
-/* -----------------------------import components -------------------------------- */
-
-@import "../src/components/navbar/NavBar.scss";
-@import "../src/components/moduleChooseFormation/ModuleChooseFormation.scss";
-@import "../src/components/moduleChooseTutorial/ModuleChooseTutorial.scss";
-@import "../src/components/footer/Footer.scss";
-@import "../src/components/menuTop/MenuTop.scss";
-@import "../src/components/tutorialExplication/TutorialExplication.scss";
-@import "../src/components/myReward/MyReward.scss";
-@import "../src/components/sortMyReward/SortMyReward.scss";
-@import "../src/components/tutorialComponent/NameTutorial.scss";
-@import "../src/components/tutorialComponent/ObjectifTutorial.scss";
-@import "../src/components/tutorialComponent/VideoTutorial.scss";
-@import "../src/components/tutorialComponent/QuizzTutorial.scss";
-@import "../src/components/selectTutorial/SelectTutorial.scss";
-@import "../src/components/modal/ConfirmBack.scss";
-@import "../src/components/modal/ConfirmChoiseDelete.scss";
-
 * {
   margin: 0;
   padding: 0;
@@ -39,14 +11,27 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: $app-primary-font;
+body {
+  line-height: 1.5;
+  background-color: $app-bg-color;
 }
 
-p,
+h1 {
+  font-family: $app-secondary-font;
+}
+
+h2 {
+  @include font-title-phone;
+}
+
+h3 {
+  @include font-subheading-phone;
+}
+
+p {
+  @include font-text-phone;
+}
+
 input,
 label,
 textarea,
@@ -60,4 +45,45 @@ li {
 
 li {
   list-style: none;
+}
+
+/* button */
+.primary-button {
+  @include primary-button-phone;
+}
+
+@media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
+  h2 {
+    @include font-title-tablet;
+  }
+
+  h3 {
+    @include font-subheading-tablet;
+  }
+
+  p {
+    @include font-text-tablet-desktop;
+  }
+
+  .primary-button {
+    @include primary-button-tablet;
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  h2 {
+    @include font-title-desktop;
+  }
+
+  h3 {
+    @include font-subheading-desktop;
+  }
+
+  p {
+    @include font-text-tablet-desktop;
+  }
+
+  .primary-button {
+    @include primary-button-desktop;
+  }
 }
