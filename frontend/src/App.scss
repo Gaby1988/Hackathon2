@@ -1,16 +1,20 @@
-@import "../src/assets/styles/variables.scss";
+@import "./assets/styles/variables.scss";
 @import "../src/assets/mixins/mixins.scss";
 
 /* -----------------------------import Pages -------------------------------- */
 
 @import "../src/assets/styles/AddPhone.scss";
 @import "../src/assets/styles/AddProduct.scss";
+@import "../src/assets/styles/PageRecap.scss";
 
 
 /* -----------------------------import components -------------------------------- */
 @import "../src/assets/styles/login.scss";
 @import "../src/assets/styles/navbar.scss";
 @import "../src/assets/styles/Drop.scss";
+@import "../src/assets/styles/PhoneView.scss";
+@import "../src/assets/styles/PhoneDistpacthViewAllWithPrice.scss";
+@import "../src/assets/styles/BackArrow.scss";
 
 * {
   margin: 0;
@@ -40,7 +44,7 @@ h3 {
 }
 
 p {
-  @include font-text-phone;
+ 
 }
 
 input,
@@ -60,7 +64,7 @@ li {
 
 /* button */
 .primary-button {
-  @include primary-button-phone;
+ 
 }
 
 @media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
@@ -73,7 +77,7 @@ li {
   }
 
   p {
-    @include font-text-tablet-desktop;
+    
   }
 
   .primary-button {

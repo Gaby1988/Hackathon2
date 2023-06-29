@@ -9,6 +9,8 @@ import Root from "./routes/Root";
 import Home from "./pages/home/Home";
 import Login from "./pages/home/login";
 import AddProduct from "./pages/AddProduct";
+import PhoneView from "./pages/PhoneView";
+import PageRecap from "./pages/PageRecap";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +25,17 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      {path: "/addProduct",
-        element: <AddProduct />,
+      {
+        path: "/addProduct",
+        element: <AddProduct />
+      },
+      {
+        path: "/phoneview",
+        element: <PhoneView />,
+      },
+      {
+        path: "/phone-recap",
+        element: <PageRecap />,
       },
     ],
   },

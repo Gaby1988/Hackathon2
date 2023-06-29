@@ -1,11 +1,11 @@
 CREATE TABLE `admin` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `email` varchar(255) UNIQUE,
   `password` varchar(255)
 );
 
 CREATE TABLE `rams` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `3bg` varchar(255),
   `4gb` varchar(255),
   `6gb` varchar(255),
@@ -14,7 +14,7 @@ CREATE TABLE `rams` (
 );
 
 CREATE TABLE `models` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `IphoneX` varchar(255),
   `IphoneSE` varchar(255),
   `Iphone11` varchar(255),
@@ -33,14 +33,14 @@ CREATE TABLE `models` (
 );
 
 CREATE TABLE `storages` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `64gb` varchar(255),
   `128gb` varchar(255),
   `256gb` varchar(255)
 );
 
 CREATE TABLE `states` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `deee` varchar(255),
   `reparable` varchar(255),
   `blocked` varchar(255),
@@ -49,16 +49,16 @@ CREATE TABLE `states` (
 );
 
 CREATE TABLE `brands` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `Iphone` varchar(255),
-  `Samsung` varchar(250),
+  `Samsung` varcha,
   `Oppo` varchar(255),
   `Huawei` varchar(255),
   `Xiamo` varchar(255)
 );
 
 CREATE TABLE `calculator` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `model_id` integer,
   `ram_id` integer,
   `state_id` integer,
@@ -67,7 +67,7 @@ CREATE TABLE `calculator` (
 );
 
 CREATE TABLE `phones` (
-  `id` integer PRIMARY KEY AUTO_INCREMENT,
+  `id` integer PRIMARY KEY,
   `brandSpecification` varchar(255),
   `modelSpecification` varchar(255),
   `ramSpecification` varchar(255),
@@ -77,7 +77,7 @@ CREATE TABLE `phones` (
   `priceSpecification` decimal,
   `accessoriesSpecification` varchar(255),
   `operatingSpecification` varchar(255),
-  `admin_id` integer
+  `admin_id` interger
 );
 
 ALTER TABLE `phones` ADD FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`);
