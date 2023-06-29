@@ -20,15 +20,17 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav>
+        <Link to="/">
         <img src={Logo} className="logo" alt="logo" />
+        </Link>
         <ul>
-          <Link to="/add-product">
+          <Link to="/addProduct">
             <li>Ajouter un article</li>
           </Link>
-          <Link to="/list-article">
+          <Link to="/PhoneView">
             <li>Liste des articles</li>
           </Link>
-          <Link to="/list-article">
+          <Link to="/addPhone">
             <li>Estimer des articles</li>
           </Link>
           {!isLoggedIn && (
