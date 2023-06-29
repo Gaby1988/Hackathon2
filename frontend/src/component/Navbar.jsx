@@ -8,11 +8,11 @@ function Navbar() {
     setIsLoggedIn(!isLoggedIn);
   };
   return (
-    <div className="navbar-containe">
+    <div className="navbar-container">
       <nav>
         <img src={Logo} className="logo" alt="logo" />
         <ul>
-          <Link to="/add-article">
+          <Link to="/add-product">
             <li>Ajouter un article</li>
           </Link>
           <Link to="/list-article">
