@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="navbar-containe">
       <nav>
-        <img src={ Logo } className="logo" alt="logo" />
+        <img src={Logo} className="logo" alt="logo" />
         <ul>
           <Link to="/add-article">
             <li>Ajouter un article</li>

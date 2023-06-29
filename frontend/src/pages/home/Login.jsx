@@ -6,27 +6,16 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
+  const [isAdmin, setIsAdmin] = useState(0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const handleChangeMail = (event) => {
-  //   if (event.target.value.length <= maxl) {
-  //     setUserName(event.target.value);
-  //   }
-  // };
-  // const handleChangePassword = (event) => {
-  //   if (event.target.value.length <= maxl) {
-  //     setPassword(event.target.value);
-  //   }
-  //   console.error(maxl);
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const body = { email, password };
-
+    const body = { email, password, isAdmin };
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
+    localStorage.setItem("isAdmin", isAdmin);
     try {
       await axios.post(`${import.meta.env.VITE_BASE_URL}/admin`, body);
     } catch (error) {
