@@ -1,10 +1,14 @@
-.inputEvaluation {
-    display: flex;
-    flex-direction: column;
+.inputEvalModel {
+  display: flex;
+  flex-direction: column;
 
+  .titleEvalModel {
+    height: 2rem;
+    font-size: 2rem;
+    margin-top: 5rem;
 }
-.inputEvaluation2 {
-    display: flex;
-    flex-direction: column;
-
+    .inputEvaluation {
+      height: 2rem;
+      margin-top: 3rem;
+  }
 }

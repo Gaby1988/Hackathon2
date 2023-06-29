@@ -14,9 +14,9 @@ function EvalModel({ brand, model, setBrand, setModel }) {
   };
   return (
     <div>
-      <div className="inputEvaluation">
-        <label className="">Quelle est la marque du téléphone ?</label>
-        <select value={brand} onChange={handleBrandChange}>
+      <div className="inputEvalModel">
+        <label className="titleEvalModel">Quelle est la marque du téléphone ?</label>
+        <select className="inputEvaluation" value={brand} onChange={handleBrandChange}>
           <option value="">Sélectionner une marque</option>
           <option value="Apple">Apple</option>
           <option value="Samsung">Samsung</option>
@@ -26,9 +26,9 @@ function EvalModel({ brand, model, setBrand, setModel }) {
         </select>
       </div>
       {showModelOptions ? (
-        <div className="inputEvaluation">
-          <label>Quel est le modèle du téléphone ?</label>
-          <select value={model} onChange={(e) => setModel(e.target.value)}>
+        <div className="inputEvalModel">
+          <label className="titleEvalModel">Quel est le modèle du téléphone ?</label>
+          <select className="inputEvaluation" value={model} onChange={(e) => setModel(e.target.value)}>
             <option value="">Sélectionner un modèle</option>
             {brand === "Apple" && (
               <>
@@ -61,9 +61,9 @@ function EvalModel({ brand, model, setBrand, setModel }) {
           </select>
         </div>
       ) : (
-        <div className="inputEvaluation">
-          <label>Quel est le modèle du téléphone ?</label>
-          <select value={model} disabled>
+        <div className="inputEvalModel">
+          <label className="titleEvalModel">Quel est le modèle du téléphone ?</label>
+          <select className="inputEvaluation" value={model} disabled>
             <option value="">Sélectionner un modèle</option>
           </select>
         </div>
