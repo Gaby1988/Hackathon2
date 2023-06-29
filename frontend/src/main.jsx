@@ -7,7 +7,7 @@ import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
 import Home from "./pages/home/Home";
-import Login from "./pages/home/login";
+import Login from "./pages/home/Login";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
 
