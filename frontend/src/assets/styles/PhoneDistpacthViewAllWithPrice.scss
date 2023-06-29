@@ -1,6 +1,5 @@
 .phoneDistpacthViewAllWithPrice {
-  @include background-radius-height-width;
-  z-index: 20;
+  @include background-radius-height-width;z-index: 20;
   margin: 25px auto 0 auto;
   display: flex;
   flex-direction: column;

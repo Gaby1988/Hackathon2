@@ -54,7 +54,7 @@ function AddProduct() {
             <option value="très bon état">Très bon état</option>
             <option value="neuf">Neuf</option>
           </select>
-          <Drop className="drop" />
+          <Drop className="drop"/>
         </div>
         <img src={Bulles} className="bulleLogo" alt="décoration avec le logo" />
       </div>
