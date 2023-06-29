@@ -11,6 +11,8 @@ import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
+import AddPhone from "./pages/addPhone/AddPhone";
+import EvalPhone from "./pages/addPhone/EvalPhone";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: "/phone-recap",
         element: <PageRecap />,
+      },
+      {
+        path: "/evaluation",
+        element: <AddPhone />,
+      },
+      {
+        path: "/questions",
+        element: <EvalPhone />,
       },
     ],
   },

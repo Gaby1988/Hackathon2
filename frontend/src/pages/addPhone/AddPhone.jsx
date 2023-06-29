@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import EvalModel from "./EvalModel";
+import EvalCapacity from "./EvalCapacity";
+import EvalCondition from "./EvalCondition";
 import ordiTabletPhone from "../../assets/pictures/ordi-tablet-tel.png";
 
+import { Steps } from "primereact/steps";
+import { Toast } from "primereact/toast";
+
 function AddPhone() {
+  const [page, setPage] = useState(0);
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [storageCapacity, setStorageCapacity] = useState("");
@@ -10,6 +17,72 @@ function AddPhone() {
   const [price, setPrice] = useState(0);
   const [basePrice, setBasePrice] = useState(0);
 
+  const [activeIndex, setActiveIndex] = useState(1);
+  const toast = useRef(null);
+
+  const formTitle = ["model", "capacity", "condition"];
+
+  const items = [
+    {
+      label: "Modèle",
+      command: (event) => {
+        toast.current.show({
+          severity: "info",
+          summary: "First Step",
+          detail: event.item.label,
+        });
+      },
+    },
+    {
+      label: "Capacité",
+      command: (event) => {
+        toast.current.show({
+          severity: "info",
+          summary: "Second Step",
+          detail: event.item.label,
+        });
+      },
+    },
+    {
+      label: "Condition",
+      command: (event) => {
+        toast.current.show({
+          severity: "info",
+          summary: "Last Step",
+          detail: event.item.label,
+        });
+      },
+    },
+  ];
+
+  //page display questions
+  const pageDisplay = () => {
+    if (page === 0) {
+      return (
+        <EvalModel
+          brand={brand}
+          setBrand={setBrand}
+          model={model}
+          setModel={setModel}
+        />
+      );
+    } else if (page === 1) {
+      return (
+        <EvalCapacity
+          storageCapacity={storageCapacity}
+          setStorageCapacity={setStorageCapacity}
+          ram={ram}
+          setRam={setRam}
+        />
+      );
+    } else {
+      return (
+        <EvalCondition condition={condition} setCondition={setCondition} />
+      );
+    }
+  };
+
+  //calcul price
   const calculatePrice = () => {
     setBasePrice(500); // Prix de base
     switch (brand) {
@@ -115,109 +188,45 @@ function AddPhone() {
           ) : (
             <p>Capacité de stockage</p>
           )}
-          {condition ? <p> {condition}</p> : <p> condition</p>}
           {ram ? <p> {ram}</p> : <p>ram</p>}
+          {condition ? <p> {condition}</p> : <p> condition</p>}
         </div>
       </div>
       <div className="right-side-page-container">
-        <div>
-          <label>Marque:</label>
-          <select value={brand} onChange={(e) => setBrand(e.target.value)}>
-            <option value="">Sélectionner une marque</option>
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Huawei">Huawei</option>
-            <option value="Oppo">Oppo</option>
-            <option value="Other">Autre</option>
-          </select>
+        <div className="card">
+          <Toast ref={toast}></Toast>
+          <Steps
+            model={items}
+            activeIndex={activeIndex}
+            onSelect={(e) => setActiveIndex(e.index)}
+            readOnly={false}
+          />
         </div>
-        {brand === "Apple" ||
-        brand === "Samsung" ||
-        brand === "Huawei" ||
-        brand === "Oppo" ? (
-          <div>
-            <label>Modèle:</label>
-            <select value={model} onChange={(e) => setModel(e.target.value)}>
-              <option value="">Sélectionner un modèle</option>
-              {brand === "Apple" && (
-                <>
-                  <option value="iPhone X">iPhone X</option>
-                  <option value="iPhone XS">iPhone XS</option>
-                  <option value="iPhone 11">iPhone 11</option>
-                </>
-              )}
-              {brand === "Samsung" && (
-                <>
-                  <option value="Galaxy S9">Galaxy S9</option>
-                  <option value="Galaxy S10">Galaxy S10</option>
-                  <option value="Galaxy S20">Galaxy S20</option>
-                </>
-              )}
-              {brand === "Oppo" && (
-                <>
-                  <option value="Oppo Reno 4">Oppo Reno 4</option>
-                  <option value="Oppo Find X2">Oppo Find X2</option>
-                  <option value="Oppo A92">Oppo A92</option>
-                </>
-              )}
-              {brand === "Huawei" && (
-                <>
-                  <option value="Huawei P30">Huawei P30</option>
-                  <option value="Huawei Mate 20 Pro">Huawei Mate 20 Pro</option>
-                  <option value="Huawei Nova 7i">Huawei Nova 7i</option>
-                </>
-              )}
-            </select>
+        <div className="containerQuestionsAndStep">
+          <div className="questionsConatiner">
+            <div className="headerQuestions">
+              <h3>{formTitle[page]}</h3>
+            </div>
+            <div className="questions"> {pageDisplay()}</div>
+            <div className="footerQuestions">
+              <button
+                disabled={page === 0}
+                onClick={() => {
+                  setPage((currPage) => currPage - 1);
+                }}
+              >
+                prev
+              </button>
+              <button
+                disabled={page === formTitle.length - 1}
+                onClick={() => {
+                  setPage((currPage) => currPage + 1);
+                }}
+              >
+                next
+              </button>
+            </div>
           </div>
-        ) : (
-          <div>
-            <label>Modèle:</label>
-            <select value={model} disabled>
-              <option value="">Sélectionner un modèle</option>
-            </select>
-          </div>
-        )}
-        <div>
-          <label>Capacité de stockage:</label>
-          <select
-            value={storageCapacity}
-            onChange={(e) => setStorageCapacity(e.target.value)}
-          >
-            <option value="">Sélectionner une capacité de stockage</option>
-            <option value="16GB">16GB</option>
-            <option value="32GB">32GB</option>
-            <option value="64GB">64GB</option>
-            <option value="128GB">128GB</option>
-            <option value="256GB">256GB</option>
-          </select>
-        </div>
-        <div>
-          <label>État général:</label>
-          <select
-            value={condition}
-            onChange={(e) => setCondition(e.target.value)}
-          >
-            <option value="">Sélectionner l'état général</option>
-            <option value="Excellent">Excellent état</option>
-            <option value="Good">Bon état</option>
-            <option value="Mauvais">Mauvais état</option>
-            <option value="Other">Autre</option>
-          </select>
-        </div>
-        <div>
-          <label>RAM:</label>
-          <select value={ram} onChange={(e) => setRam(e.target.value)}>
-            <option value="">Sélectionner la RAM</option>
-            <option value="2GB">2GB</option>
-            <option value="4GB">4GB</option>
-            <option value="8GB">8GB</option>
-            <option value="16GB">16GB</option>
-          </select>
-        </div>
-        <button onClick={calculatePrice}>Calculer le prix</button>
-        <div>
-          <label>Prix:</label>
-          <span>{price} €</span>
         </div>
       </div>
     </div>

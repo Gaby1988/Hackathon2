@@ -20,7 +20,9 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav>
-        <img src={Logo} className="logo" alt="logo" />
+        <Link to="/home">
+          <img src={Logo} className="logo" alt="logo" />
+        </Link>
         <ul>
           <Link to="/add-product">
             <li>Ajouter un article</li>
