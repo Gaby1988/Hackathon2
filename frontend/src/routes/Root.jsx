@@ -5,7 +5,7 @@ import NavBar from "../component/Navbar";
 function Root() {
   return (
     <div>
-      <NavBar />A
+      <NavBar />
       <Outlet />
       {/* <Footer /> */}
     </div>

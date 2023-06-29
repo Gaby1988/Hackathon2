@@ -12,11 +12,14 @@ $app-secondary-font-color: #ffab1e;
 $app-supporting-color2: #eeeeee;
 $app-third-font-color: #272350;
 
+
 /* Website Background */
 $app-bg-color: white;
 $app-bg-color-button: #000000;
 $app-color-button: white;
 $app-text-p: black;
+$app-phone-font-color: #D9D9D9;
+$app-phone-font-radius: 20px;
 
 /* Media query */
 $app-mobile: 320px;
@@ -156,4 +159,12 @@ $font-size-list-burger-tablet: 38px;
   &:hover {
     border: solid 2px $app-primary-font-color;
   }
+}
+
+
+@mixin background-radius-height-width {
+  background-color: $app-phone-font-color;
+  border-radius: $app-phone-font-radius;
+  height: 450px;
+  width: 300px;
 }
