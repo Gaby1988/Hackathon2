@@ -4,11 +4,9 @@ import { Password } from "primereact/password";
 import bulles from "../../assets/pictures/Bulles.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   // const handleChangeMail = (event) => {
   //   if (event.target.value.length <= maxl) {
   //     setUserName(event.target.value);
@@ -20,11 +18,9 @@ function Login() {
   //   }
   //   console.error(maxl);
   // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const body = { email, password };
-
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     try {
@@ -33,7 +29,6 @@ function Login() {
       console.error(error);
     }
   };
-
   return (
     <div className="login-container">
       <img src={bulles} alt="" />
@@ -62,8 +57,6 @@ function Login() {
             type="submit"
             onClick={handleSubmit}
           >
-        <Link to="/home">
-          <button className="primary-button" type="submit">
             connexion
           </button>
         </Link>
