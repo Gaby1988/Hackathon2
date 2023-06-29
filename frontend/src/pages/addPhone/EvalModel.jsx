@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 
 function EvalModel({ brand, model, setBrand, setModel }) {
+  const [showModelOptions, setShowModelOptions] = useState(false);
+  const handleBrandChange = (e) => {
+    const selectedBrand = e.target.value;
+    setBrand(selectedBrand);
+    setShowModelOptions(
+      selectedBrand === "Apple" ||
+        selectedBrand === "Samsung" ||
+        selectedBrand === "Huawei" ||
+        selectedBrand === "Oppo"
+    );
+  };
   return (
     <div>
-      <div>
-        <label>Quelle est la marque du téléphone ?</label>
-        <select value={brand} onChange={(e) => setBrand(e.target.value)}>
+      <div className="inputEvaluation">
+        <label className="">Quelle est la marque du téléphone ?</label>
+        <select value={brand} onChange={handleBrandChange}>
           <option value="">Sélectionner une marque</option>
           <option value="Apple">Apple</option>
           <option value="Samsung">Samsung</option>
@@ -14,11 +25,8 @@ function EvalModel({ brand, model, setBrand, setModel }) {
           <option value="Other">Autre</option>
         </select>
       </div>
-      {brand === "Apple" ||
-      brand === "Samsung" ||
-      brand === "Huawei" ||
-      brand === "Oppo" ? (
-        <div>
+      {showModelOptions ? (
+        <div className="inputEvaluation">
           <label>Quel est le modèle du téléphone ?</label>
           <select value={model} onChange={(e) => setModel(e.target.value)}>
             <option value="">Sélectionner un modèle</option>
@@ -53,7 +61,7 @@ function EvalModel({ brand, model, setBrand, setModel }) {
           </select>
         </div>
       ) : (
-        <div>
+        <div className="inputEvaluation">
           <label>Quel est le modèle du téléphone ?</label>
           <select value={model} disabled>
             <option value="">Sélectionner un modèle</option>
