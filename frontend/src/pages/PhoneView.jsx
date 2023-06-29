@@ -61,8 +61,8 @@ function PhoneView() {
   return (
     <>
       <BackArrow />
+      <img className="phoneViewImageBulle" src={bulles} alt="bulle" />
       <div className="phoneView">
-        <img className="phoneViewImageBulle" src={bulles} alt="bulle" />
         {dataAll.map((item) => (
           <PhoneDistpacthViewAllWithPrice item={item} key={item.id} />
         ))}
