@@ -1,0 +1,17 @@
+.phoneDistpacthViewAllWithPrice {
+  @include background-radius-height-width;
+  z-index: 20;
+  margin: 25px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .figureForImage {
+    width: 75%;
+    .imagePhone {
+      mix-blend-mode: multiply;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
