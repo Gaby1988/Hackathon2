@@ -161,6 +161,9 @@ function AddPhone() {
     setPrice(basePrice);
   };
 
+  console.log(price);
+  console.log(basePrice);
+
   return (
     <div className="add-phone-container">
       <div className="left-side-page-container">
