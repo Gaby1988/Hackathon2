@@ -3,9 +3,9 @@ import React from "react";
 function EvalCapacity({ storageCapacity, setStorageCapacity, ram, setRam }) {
   return (
     <>
-      <div>
-        <label>Quelle est la capacité de stockage ?</label>
-        <select
+      <div className="inputEvalCapacity">
+        <label className="titleEvalCapacity">Quelle est la capacité de stockage ?</label>
+        <select className="inputEvaluationCapacity"
           value={storageCapacity}
           onChange={(e) => setStorageCapacity(e.target.value)}
         >
@@ -17,9 +17,9 @@ function EvalCapacity({ storageCapacity, setStorageCapacity, ram, setRam }) {
           <option value="256GB">256GB</option>
         </select>
       </div>
-      <div>
-        <label>RAM:</label>
-        <select value={ram} onChange={(e) => setRam(e.target.value)}>
+      <div className="inputEvalCapacity">
+        <label className="titleEvalCapacity">RAM:</label>
+        <select className="inputEvaluationCapacity" value={ram} onChange={(e) => setRam(e.target.value)}>
           <option value="">Sélectionner la RAM</option>
           <option value="2GB">2GB</option>
           <option value="4GB">4GB</option>

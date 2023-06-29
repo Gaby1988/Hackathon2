@@ -13,6 +13,8 @@ import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
 import AddPhone from "./pages/addPhone/AddPhone";
 import EvalPhone from "./pages/addPhone/EvalPhone";
+import EvalModel from "./pages/addPhone/EvalModel";
+
 import LegalNotice from "./pages/LegalNotice";
 import AboutUs from "./pages/AboutUs";
 
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/questions",
         element: <EvalPhone />,
+      },
+      {
+        path: "/evaluation",
+        element: <EvalModel />,
       },
       {
         path: "/legalNotice",
