@@ -10,7 +10,7 @@ function HomePage() {
     <div className="container">
       <h2>Choisissez votre appareil</h2>
       <div className="container-appareils">
-        <Link to="">
+        <Link to="/addPhone">
           <div className="smartphone">
             <h3>Smartphone</h3>
             <img

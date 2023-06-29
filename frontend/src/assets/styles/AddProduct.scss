@@ -4,23 +4,13 @@ main {
   .arrowBack {
     display: flex;
     margin-top: 2rem;
-    .arrow {
-      height: 2rem;
-      margin-left: 1rem;
-    }
-    .backArrow {
-      color: $app-third-font-color;
-      margin-left: 0.4rem;
-      margin-top: 0.1rem;
-    }
   }
 
   .titleAddProduct {
     color: $app-third-font-color;
     font-size: 2rem;
-    margin-left: 25rem;
+    margin-right: 70rem;
     margin-top: 3rem;
-    
   }
   .inputLogo {
     display: flex;
