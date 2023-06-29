@@ -1,0 +1,14 @@
+.inputEvalCondition {
+  display: flex;
+  flex-direction: column;
+
+  .titleEvalCondition {
+    height: 2rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+  .inputEvaluationCondition {
+    height: 2rem;
+    margin-top: 3rem;
+  }
+}
