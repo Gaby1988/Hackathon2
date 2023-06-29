@@ -1,0 +1,32 @@
+.add-phone-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .left-side-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0fdfd;
+    height: 80vh;
+    width: 40%;
+
+    img {
+      width: 400px;
+    }
+
+    .recap-value-tel {
+      border: solid 1px $app-primary-font-color;
+      border-radius: 6px;
+      width: 300px;
+
+      p {
+        border-bottom: solid 1px $app-primary-font-color;
+      }
+    }
+  }
+
+  .right-side-page-container {
+    padding-left: 6rem;
+  }
+}

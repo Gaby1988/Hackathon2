@@ -1,13 +1,9 @@
 @import "./assets/styles/variables.scss";
 @import "../src/assets/mixins/mixins.scss";
-
 /* -----------------------------import Pages -------------------------------- */
-
 @import "../src/assets/styles/AddPhone.scss";
 @import "../src/assets/styles/AddProduct.scss";
 @import "../src/assets/styles/PageRecap.scss";
-
-
 /* -----------------------------import components -------------------------------- */
 @import "../src/assets/styles/login.scss";
 @import "../src/assets/styles/navbar.scss";
@@ -17,50 +13,40 @@
 @import "../src/assets/styles/PhoneView.scss";
 @import "../src/assets/styles/PhoneDistpacthViewAllWithPrice.scss";
 @import "../src/assets/styles/BackArrow.scss";
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 a {
   text-decoration: none;
 }
-
 body {
   line-height: 1.5;
   background-color: $app-bg-color;
 }
-
 h1 {
   font-family: $app-primary-font;
 }
-
 h2 {
   @include font-title-phone;
 }
-
 h3 {
   @include font-subheading-phone;
 }
-
 #root {
   text-align: center;
   display: flex;
   flex-direction: column;
- 
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
 }
-
 header,
 footer {
   flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
-
 main {
   flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
-
 input,
 label,
 textarea,
@@ -71,47 +57,35 @@ li {
   font-family: $app-primary-font;
   font-weight: 600;
 }
-
 li {
   list-style: none;
 }
-
 /* button */
 .primary-button {
- 
 }
-
 @media screen and (min-width: $app-tablet) and (max-width: $app-desktop) {
   h2 {
     @include font-title-tablet;
   }
-
   h3 {
     @include font-subheading-tablet;
   }
-
   p {
-    
   }
-
   .primary-button {
     @include primary-button-tablet;
   }
 }
-
 @media screen and (min-width: $app-desktop) {
   h2 {
     @include font-title-desktop;
   }
-
   h3 {
     @include font-subheading-desktop;
   }
-
   p {
     @include font-text-tablet-desktop;
   }
-
   .primary-button {
     @include primary-button-desktop;
   }

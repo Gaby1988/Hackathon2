@@ -1,27 +1,21 @@
 .phoneView {
-  position: relative;
-  padding: 0 10vw 0 10vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-  column-gap: 100px;
-  border-radius: $app-phone-font-radius;
-  justify-content: center;
-  z-index: 10;
-  overflow-y: scroll;
-  height: 70vh;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  .arrowBack {
-    display: flex;
-    border: 2px solid black;
-    height: 50px;
-  }
-}
-.phoneViewImageBulle {
-  position: absolute;
-  right: 0;
-  height: 65vh;
-  background-size: contain;
+    position: relative;
+    padding: 0 10vw 0 10vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    column-gap: 100px;
+    justify-content: center;
+    z-index: 10;
+    .arrowBack {
+        display: flex;
+        border: 2px solid black;
+        height: 50px;
+    }
+    .phoneViewImageBulle {
+        position: absolute;
+        right: 0;
+        height: 80vh;
+        background-size: contain;
+    }
 }

@@ -2,7 +2,7 @@
   background-image: url("../../../src/assets/pictures/background-pagehome.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 74vh;
+  height: 100vh;
   h2 {
     text-align: center;
     padding-bottom: 25px;
@@ -15,13 +15,13 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 100px;
+    margin-right: 100px;
     .smartphone-img,
     .tablette-img,
     .ordinateur-img,
     .accessoires-img {
-      width: 207px;
+      width: 250px;
       transition: transform 0.3s ease;
       box-shadow: 3px 3px 3px grey;
       border-radius: 6px;
@@ -35,13 +35,12 @@
     .tablette-img,
     .ordinateur-img,
     .accessoires-img {
-      opacity: 0.5;
+        opacity: 0.5;
     }
     h3 {
       color: $app-primary-font-color;
       font-weight: bold;
       text-align: center;
-      margin: 0 0 1rem 0;
     }
   }
 }
