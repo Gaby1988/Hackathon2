@@ -1,19 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { IsDesktopContext } from "../../contexts/IsDesktopContext";
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
 import bulles from "../../assets/pictures/Bulles.png";
-import { Link } from "react-router-dom";
+import api from "../../services/api";
 
 function Login() {
+  const navigate = useNavigate();
+  const { isAdmin, setIsAdmin } = useContext(IsDesktopContext);
   const [userName, setUserName] = useState("");
-
+  const [data, setData] = useState([]);
   const maxl = 250;
-
+  console.info(isAdmin);
   const handleChangeMail = (event) => {
     if (event.target.value.length <= maxl) {
       setUserName(event.target.value);
     }
   };
+  useEffect(() => {
+    api.get("/admin").then((response) => {
+      setData(response.data);
+    });
+  }, []);
 
   const [password, setPassword] = useState("");
 
@@ -22,6 +31,15 @@ function Login() {
       setPassword(event.target.value);
     }
     console.error(maxl);
+  };
+  const dataMap = data.map((item) => item.email);
+  const handleLogin = () => {
+    if (userName === dataMap[0]) {
+      navigate("/");
+      setIsAdmin(true);
+    } else {
+      navigate("/ethrte");
+    }
   };
 
   return (
@@ -46,13 +64,12 @@ function Login() {
             toggleMask
           />
         </label>
-        <Link to="/homepage">
-          <button className="primary-button" type="submit">
-            connexion
-          </button>
-        </Link>
+        <button className="primary-button" onClick={() => handleLogin()}>
+          Connexion
+        </button>
       </form>
     </div>
   );
 }
+
 export default Login;

@@ -26,11 +26,11 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/addProduct",
+        path: "/add-product",
         element: <AddProduct />,
       },
       {
-        path: "/phoneview",
+        path: "/list-article",
         element: <PhoneView />,
       },
       {
