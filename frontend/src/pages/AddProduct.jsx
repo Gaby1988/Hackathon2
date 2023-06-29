@@ -1,15 +1,18 @@
-import React from "react" ;
+import React from "react";
 import Arrow from "../assets/pictures/arrow.png";
 import Bulles from "../assets/pictures/Bulles.png";
 import Drop from "../component/Drop";
+import { Link } from "react-router-dom";
 
 function AddProduct() {
   return (
     <>
-      <div className="arrowBack">
-        <img src={Arrow} className="arrow" alt="flèche retour" />
-        <h3 className="backArrow">Retour</h3>
-      </div>
+      <Link to="/evaluation">
+        <div className="arrowBack">
+          <img src={Arrow} className="arrow" alt="flèche retour" />
+          <h3 className="backArrow">Retour</h3>
+        </div>
+      </Link>
       <h2 className="titleAddProduct">AJOUTER UN ARTICLE</h2>
       <div className="inputLogo">
         <div className="input-container">
@@ -57,7 +60,7 @@ function AddProduct() {
             <option value="très bon état">Très bon état</option>
             <option value="neuf">Neuf</option>
           </select>
-          <Drop className="drop"/>
+          <Drop className="drop" />
         </div>
         <img src={Bulles} className="bulleLogo" alt="décoration avec le logo" />
       </div>
