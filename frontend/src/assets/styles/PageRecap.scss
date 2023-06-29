@@ -1,5 +1,50 @@
-.page-recap-container{
-  h2{
-    text-align: center;
+.page-recap-container {
+  height: calc(100vh - 150px);
+  background-image: url("../../../src/assets/pictures/background-bubble.png");
+  background-size: cover;
+  background-position-y: 25%;
+}
+
+.dv-title {
+  display: flex;
+  margin: 1rem 0 1rem 19rem;
+  width: 36%;
+  font-size: 1.1rem;
+}
+
+.dv-phone {
+  width: 63%;
+  display: flex;
+  h3 {
+    font-family: $app-primary-font;
+    font-size: 1.3rem;
+    text-align: start;
+  }
+  h4 {
+    text-align: start;
+    margin-bottom: 2rem;
+    font-family: $app-primary-font;
+    font-size: 1.2rem;
+  }
+
+  .phone-img {
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .dv-phone-details {
+    width: 103%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1px;
+  }
+}
+.prix {
+  width: 350px;
+  height: 41px;
+  margin: 2rem 3rem;
+
+  h3 {
+    font-size: 1.5rem;
   }
 }

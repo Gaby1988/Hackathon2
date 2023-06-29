@@ -6,7 +6,9 @@ import BackArrow from "../component/BackArrow";
 function AddProduct() {
   return (
     <>
-      <BackArrow />
+      <div className="arrowBack">
+        <BackArrow />
+      </div>
       <h2 className="titleAddProduct">AJOUTER UN ARTICLE</h2>
       <div className="inputLogo">
         <div className="input-container">

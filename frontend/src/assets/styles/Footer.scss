@@ -18,12 +18,31 @@
         padding-left: 5rem;
         align-items: center;
     }
+    .Hammer{
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+    }
+    .Persons{
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+    }
+
     .questionFaq{
         height: 2rem;
         margin-right: 1rem;
     }
     .setting{
         height: 2rem;
+        margin-right: 1rem;
+    }
+    .hammer{
+        height: 2.5rem;
+        margin-right: 1rem;
+    }
+    .persons{
+        height: 3rem;
         margin-right: 1rem;
     }
     li{
