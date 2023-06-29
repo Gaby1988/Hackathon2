@@ -1,11 +1,11 @@
-CREATE TABLE `admin` (
-  `id` integer PRIMARY KEY,
+CREATE TABLE `admins` (
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `email` varchar(255) UNIQUE,
   `password` varchar(255)
 );
 
 CREATE TABLE `rams` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `3bg` varchar(255),
   `4gb` varchar(255),
   `6gb` varchar(255),
@@ -14,7 +14,7 @@ CREATE TABLE `rams` (
 );
 
 CREATE TABLE `models` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `IphoneX` varchar(255),
   `IphoneSE` varchar(255),
   `Iphone11` varchar(255),
@@ -33,14 +33,14 @@ CREATE TABLE `models` (
 );
 
 CREATE TABLE `storages` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `64gb` varchar(255),
   `128gb` varchar(255),
   `256gb` varchar(255)
 );
 
 CREATE TABLE `states` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `deee` varchar(255),
   `reparable` varchar(255),
   `blocked` varchar(255),
@@ -49,16 +49,16 @@ CREATE TABLE `states` (
 );
 
 CREATE TABLE `brands` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `Iphone` varchar(255),
-  `Samsung` varcha,
+  `Samsung` varchar(255),
   `Oppo` varchar(255),
   `Huawei` varchar(255),
   `Xiamo` varchar(255)
 );
 
 CREATE TABLE `calculator` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `model_id` integer,
   `ram_id` integer,
   `state_id` integer,
@@ -67,7 +67,7 @@ CREATE TABLE `calculator` (
 );
 
 CREATE TABLE `phones` (
-  `id` integer PRIMARY KEY,
+  `id` integer PRIMARY KEY AUTO_INCREMENT,
   `brandSpecification` varchar(255),
   `modelSpecification` varchar(255),
   `ramSpecification` varchar(255),
@@ -77,17 +77,17 @@ CREATE TABLE `phones` (
   `priceSpecification` decimal,
   `accessoriesSpecification` varchar(255),
   `operatingSpecification` varchar(255),
-  `admin_id` interger
+  `admin_id` integer
 );
 
-ALTER TABLE `phones` ADD FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`);
+-- ALTER TABLE `phones` ADD FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`);
 
-ALTER TABLE `calculator` ADD FOREIGN KEY (`model_id`) REFERENCES `models` (`id`);
+-- ALTER TABLE `calculator` ADD FOREIGN KEY (`model_id`) REFERENCES `models` (`id`);
 
-ALTER TABLE `calculator` ADD FOREIGN KEY (`ram_id`) REFERENCES `rams` (`id`);
+-- ALTER TABLE `calculator` ADD FOREIGN KEY (`ram_id`) REFERENCES `rams` (`id`);
 
-ALTER TABLE `calculator` ADD FOREIGN KEY (`storage_id`) REFERENCES `storages` (`id`);
+-- ALTER TABLE `calculator` ADD FOREIGN KEY (`storage_id`) REFERENCES `storages` (`id`);
 
-ALTER TABLE `calculator` ADD FOREIGN KEY (`state_id`) REFERENCES `states` (`id`);
+-- ALTER TABLE `calculator` ADD FOREIGN KEY (`state_id`) REFERENCES `states` (`id`);
 
-ALTER TABLE `calculator` ADD FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`);
+-- ALTER TABLE `calculator` ADD FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`);
