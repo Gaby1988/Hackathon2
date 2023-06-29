@@ -11,7 +11,7 @@ import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
-import AddPhone from "./pages/AddProduct";
+import AddPhone from "./pages/addPhone/AddPhone";
 
 const router = createBrowserRouter([
   {
