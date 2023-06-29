@@ -4,9 +4,9 @@ import Logo from "../assets/pictures/Logo.png";
 
 function Navbar() {
   return (
-    <div className="navbar-containe">
+    <div className="navbar-container">
       <nav>
-        <Link to="/login">
+        <Link to="/home">
           <img src={Logo} className="logo" alt="logo" />
         </Link>
         <ul>
