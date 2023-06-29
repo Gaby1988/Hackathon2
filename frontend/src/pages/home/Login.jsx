@@ -30,7 +30,7 @@ function Login() {
       <h2>SE CONNECTER</h2>
       <form>
         <label>
-          UserName: <br />
+          Email: <br />
           <InputText
             className="input-text"
             value={userName}

@@ -10,10 +10,9 @@ $app-secondary-font-color: #ffab1e;
 $app-supporting-color2: #eeeeee;
 $app-third-font-color: #272350;
 
-
 /* Website Background */
 $app-bg-color: white;
-$app-bg-color-button: #000000;
+$app-bg-color-button: #02c0c4;
 $app-color-button: white;
 $app-text-p: black;
 
@@ -96,6 +95,7 @@ $font-size-list-burger-tablet: 38px;
 
   &:hover {
     border: solid 2px $app-bg-color-button;
+    background-color: $app-bg-color-button;
   }
 }
 
@@ -114,6 +114,7 @@ $font-size-list-burger-tablet: 38px;
 
   &:hover {
     border: solid 2px $app-primary-font-color;
+    background-color: $app-bg-color-button;
   }
 }
 
@@ -134,6 +135,7 @@ $font-size-list-burger-tablet: 38px;
 
   &:hover {
     border: solid 2px $app-primary-font-color;
+    background-color: $app-bg-color-button;
   }
 }
 
@@ -154,5 +156,6 @@ $font-size-list-burger-tablet: 38px;
 
   &:hover {
     border: solid 2px $app-primary-font-color;
+    background-color: $app-bg-color-button;
   }
 }
