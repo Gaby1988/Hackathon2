@@ -2,6 +2,7 @@ import React from "react";
 import Bulles from "../assets/pictures/Bulles.png";
 import Drop from "../component/Drop";
 import BackArrow from "../component/BackArrow";
+import { Link } from "react-router-dom";
 
 function AddProduct() {
   return (
@@ -57,6 +58,11 @@ function AddProduct() {
             <option value="neuf">Neuf</option>
           </select>
           <Drop className="drop"/>
+          <div className="ButtonValid">
+            <Link to="/list-article">
+              <button className="primary-button">Valider</button>
+            </Link>
+          </div>
         </div>
         <img src={Bulles} className="bulleLogo" alt="décoration avec le logo" />
       </div>
