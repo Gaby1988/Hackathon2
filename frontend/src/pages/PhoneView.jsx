@@ -16,6 +16,8 @@ import SamsungGalaxyS10 from "../assets/phone-img/Samsung-GalaxyS10e.jpg";
 import XiaomiMi11 from "../assets/phone-img/Xiaomi-Mi11Lite.jpg";
 import XiaomiPocoX3 from "../assets/phone-img/Xiaomi-PocoX3Pro.jpg";
 import XiaomiRedmiNote11 from "../assets/phone-img/Xiaomi-RedmiNote11.jpg";
+import bulles from "../assets/pictures/Bulles.png";
+import BackArrow from "../component/BackArrow";
 
 function PhoneView() {
   const arrayImgPhone = [
@@ -57,11 +59,15 @@ function PhoneView() {
     }
   }, [data]);
   return (
-    <div className="phoneView">
-      {dataAll.map((item) => (
-        <PhoneDistpacthViewAllWithPrice item={item} key={item.id} />
-      ))}
-    </div>
+    <>
+      <BackArrow />
+      <div className="phoneView">
+        <img className="phoneViewImageBulle" src={bulles} alt="bulle" />
+        {dataAll.map((item) => (
+          <PhoneDistpacthViewAllWithPrice item={item} key={item.id} />
+        ))}
+      </div>
+    </>
   );
 }
 export default PhoneView;
