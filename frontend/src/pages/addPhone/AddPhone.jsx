@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+import EvalModel from "./EvalModel";
+import EvalCapacity from "./EvalCapacity";
+import EvalCondition from "./EvalCondition";
+import ordiTabletPhone from "../../assets/pictures/ordi-tablet-tel.png";
+
 function AddPhone() {
+  const [page, setPage] = useState(0);
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [storageCapacity, setStorageCapacity] = useState("");
@@ -8,200 +14,177 @@ function AddPhone() {
   const [price, setPrice] = useState(0);
   const [basePrice, setBasePrice] = useState(0);
 
+  const formTitle = ["model", "capacity", "condition"];
+
+  //page display questions
+  const pageDisplay = () => {
+    if (page === 0) {
+      return (
+        <EvalModel
+          brand={brand}
+          setBrand={setBrand}
+          model={model}
+          setModel={setModel}
+        />
+      );
+    } else if (page === 1) {
+      return (
+        <EvalCapacity
+          storageCapacity={storageCapacity}
+          setStorageCapacity={setStorageCapacity}
+          ram={ram}
+          setRam={setRam}
+        />
+      );
+    } else {
+      return (
+        <EvalCondition
+          condition={condition}
+          setCondition={setCondition}
+          price={price}
+        />
+      );
+    }
+  };
+
+  //calcul price
   const calculatePrice = () => {
     setBasePrice(500); // Prix de base
     switch (brand) {
-    case "Apple":
-      setBasePrice((prev) => (prev += 200));
-      break;
-    case "Samsung":
-      setBasePrice((prev) => (prev += 150));
-      break;
-    case "Huawei":
-      setBasePrice((prev) => (prev += 100));
-      break;
-    case "Oppo":
-      setBasePrice((prev) => (prev += 50));
-      break;
-    case "Other":
-      setBasePrice((prev) => (prev += 25));
-      break;
-    default:
-      break;
+      case "Apple":
+        setBasePrice((prev) => (prev += 200));
+        break;
+      case "Samsung":
+        setBasePrice((prev) => (prev += 150));
+        break;
+      case "Huawei":
+        setBasePrice((prev) => (prev += 100));
+        break;
+      case "Oppo":
+        setBasePrice((prev) => (prev += 50));
+        break;
+      case "Other":
+        setBasePrice((prev) => (prev += 25));
+        break;
+      default:
+        break;
     }
     switch (model) {
-    case "'iPhone X' || model === 'Galaxy S9' || model === 'Oppo Reno 4' || model === 'Huawei P30'":
-      setBasePrice((prev) => (prev += 100));
-      break;
-    case "'iPhone XS' || model === 'Galaxy S10' || model === 'Oppo Find X2' || model === 'Huawei Mate 20 Pro":
-      setBasePrice((prev) => (prev += 80));
-      break;
-    case "Huawei P 20":
-      setBasePrice((prev) => (prev += 50));
-      break;
-    case "Oppo Find X2 Pro":
-      setBasePrice((prev) => (prev += 25));
-      break;
-    case "Other":
-      setBasePrice((prev) => (prev += 12));
-      break;
-    default:
-      break;
+      case "'iPhone X' || model === 'Galaxy S9' || model === 'Oppo Reno 4' || model === 'Huawei P30'":
+        setBasePrice((prev) => (prev += 100));
+        break;
+      case "'iPhone XS' || model === 'Galaxy S10' || model === 'Oppo Find X2' || model === 'Huawei Mate 20 Pro":
+        setBasePrice((prev) => (prev += 80));
+        break;
+      case "Huawei P 20":
+        setBasePrice((prev) => (prev += 50));
+        break;
+      case "Oppo Find X2 Pro":
+        setBasePrice((prev) => (prev += 25));
+        break;
+      case "Other":
+        setBasePrice((prev) => (prev += 12));
+        break;
+      default:
+        break;
     }
     switch (storageCapacity) {
-    case "16GB":
-      setBasePrice((prev) => (prev += 6));
-      break;
-    case "32GB":
-      setBasePrice((prev) => (prev += 12));
-      break;
-    case "64GB":
-      setBasePrice((prev) => (prev += 25));
-      break;
-    case "128GB":
-      setBasePrice((prev) => (prev += 50));
-      break;
-    case "256GB":
-      setBasePrice((prev) => (prev += 100));
-      break;
-    default:
-      break;
+      case "16GB":
+        setBasePrice((prev) => (prev += 6));
+        break;
+      case "32GB":
+        setBasePrice((prev) => (prev += 12));
+        break;
+      case "64GB":
+        setBasePrice((prev) => (prev += 25));
+        break;
+      case "128GB":
+        setBasePrice((prev) => (prev += 50));
+        break;
+      case "256GB":
+        setBasePrice((prev) => (prev += 100));
+        break;
+      default:
+        break;
     }
     switch (condition) {
-    case "Excellent":
-      setBasePrice((prev) => (prev += 100));
-      break;
-    case "Good":
-      setBasePrice((prev) => (prev += 50));
-      break;
-    case "Mauvais":
-      setBasePrice((prev) => (prev += 25));
-      break;
-    case "Other":
-      setBasePrice((prev) => (prev += 0));
-      break;
-    default:
-      break;
+      case "Excellent":
+        setBasePrice((prev) => (prev += 100));
+        break;
+      case "Good":
+        setBasePrice((prev) => (prev += 50));
+        break;
+      case "Mauvais":
+        setBasePrice((prev) => (prev += 25));
+        break;
+      case "Other":
+        setBasePrice((prev) => (prev += 0));
+        break;
+      default:
+        break;
     }
     switch (ram) {
-    case "2GB":
-      setBasePrice((prev) => (prev += 25));
-      break;
-    case "4GB":
-      setBasePrice((prev) => (prev += 50));
-      break;
-    case "8GB":
-      setBasePrice((prev) => (prev += 100));
-      break;
-    case "16GB":
-      setBasePrice((prev) => (prev += 150));
-      break;
-    default:
-      break;
+      case "2GB":
+        setBasePrice((prev) => (prev += 25));
+        break;
+      case "4GB":
+        setBasePrice((prev) => (prev += 50));
+        break;
+      case "8GB":
+        setBasePrice((prev) => (prev += 100));
+        break;
+      case "16GB":
+        setBasePrice((prev) => (prev += 150));
+        break;
+      default:
+        break;
     }
     setPrice(basePrice);
   };
+
   return (
-    <div>
-      <h2>Phone Price Calculator</h2>
-      <div>
-        <label>Marque:</label>
-        <select value={brand} onChange={(e) => setBrand(e.target.value)}>
-          <option value="">Sélectionner une marque</option>
-          <option value="Apple">Apple</option>
-          <option value="Samsung">Samsung</option>
-          <option value="Huawei">Huawei</option>
-          <option value="Oppo">Oppo</option>
-          <option value="Other">Autre</option>
-        </select>
+    <div className="add-phone-container">
+      <div className="left-side-page-container">
+        <img src={ordiTabletPhone} alt="" />
+        <div className="recap-value-tel">
+          {brand ? <p> {brand}</p> : <p>marque</p>}
+          {model ? <p> {model}</p> : <p>modèle</p>}
+          {storageCapacity ? (
+            <p> {storageCapacity}</p>
+          ) : (
+            <p>Capacité de stockage</p>
+          )}
+          {ram ? <p> {ram}</p> : <p>ram</p>}
+          {condition ? <p> {condition}</p> : <p> condition</p>}
+        </div>
       </div>
-      {brand === "Apple" ||
-      brand === "Samsung" ||
-      brand === "Huawei" ||
-      brand === "Oppo" ? (
-          <div>
-            <label>Modèle:</label>
-            <select value={model} onChange={(e) => setModel(e.target.value)}>
-              <option value="">Sélectionner un modèle</option>
-              {brand === "Apple" && (
-                <>
-                  <option value="iPhone X">iPhone X</option>
-                  <option value="iPhone XS">iPhone XS</option>
-                  <option value="iPhone 11">iPhone 11</option>
-                </>
-              )}
-              {brand === "Samsung" && (
-                <>
-                  <option value="Galaxy S9">Galaxy S9</option>
-                  <option value="Galaxy S10">Galaxy S10</option>
-                  <option value="Galaxy S20">Galaxy S20</option>
-                </>
-              )}
-              {brand === "Oppo" && (
-                <>
-                  <option value="Oppo Reno 4">Oppo Reno 4</option>
-                  <option value="Oppo Find X2">Oppo Find X2</option>
-                  <option value="Oppo A92">Oppo A92</option>
-                </>
-              )}
-              {brand === "Huawei" && (
-                <>
-                  <option value="Huawei P30">Huawei P30</option>
-                  <option value="Huawei Mate 20 Pro">Huawei Mate 20 Pro</option>
-                  <option value="Huawei Nova 7i">Huawei Nova 7i</option>
-                </>
-              )}
-            </select>
+      <div className="right-side-page-container">
+        <div className="containerQuestionsAndStep">
+          <div className="questionsConatiner">
+            <div className="headerQuestions">
+              <h3>{formTitle[page]}</h3>
+            </div>
+            <div className="questions"> {pageDisplay()}</div>
+            <div className="footerQuestions">
+              <button
+                disabled={page === 0}
+                onClick={() => {
+                  setPage((currPage) => currPage - 1);
+                }}
+              >
+                prev
+              </button>
+              <button
+                disabled={page === formTitle.length - 1}
+                onClick={() => {
+                  setPage((currPage) => currPage + 1);
+                }}
+              >
+                next
+              </button>
+            </div>
           </div>
-        ) : (
-          <div>
-            <label>Modèle:</label>
-            <select value={model} disabled>
-              <option value="">Sélectionner un modèle</option>
-            </select>
-          </div>
-        )}
-      <div>
-        <label>Capacité de stockage:</label>
-        <select
-          value={storageCapacity}
-          onChange={(e) => setStorageCapacity(e.target.value)}
-        >
-          <option value="">Sélectionner une capacité de stockage</option>
-          <option value="16GB">16GB</option>
-          <option value="32GB">32GB</option>
-          <option value="64GB">64GB</option>
-          <option value="128GB">128GB</option>
-          <option value="256GB">256GB</option>
-        </select>
-      </div>
-      <div>
-        <label>État général:</label>
-        <select
-          value={condition}
-          onChange={(e) => setCondition(e.target.value)}
-        >
-          <option value="">Sélectionner l'état général</option>
-          <option value="Excellent">Excellent état</option>
-          <option value="Good">Bon état</option>
-          <option value="Mauvais">Mauvais état</option>
-          <option value="Other">Autre</option>
-        </select>
-      </div>
-      <div>
-        <label>RAM:</label>
-        <select value={ram} onChange={(e) => setRam(e.target.value)}>
-          <option value="">Sélectionner la RAM</option>
-          <option value="2GB">2GB</option>
-          <option value="4GB">4GB</option>
-          <option value="8GB">8GB</option>
-          <option value="16GB">16GB</option>
-        </select>
-      </div>
-      <button onClick={calculatePrice}>Calculer le prix</button>
-      <div>
-        <label>Prix:</label>
-        <span>{price} €</span>
+        </div>
       </div>
     </div>
   );

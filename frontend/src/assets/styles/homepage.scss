@@ -2,26 +2,31 @@
   background-image: url("../../../src/assets/pictures/background-pagehome.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   h2 {
     text-align: center;
     padding-bottom: 25px;
-    padding-top: 25px;
     color: $app-secondary-font-color;
   }
   .container-appareils {
     display: grid;
-    grid-template-rows: 1fr 1.5fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 3rem;
+    width: 60%;
     justify-items: center;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+
+    margin-top: 1rem;
     .smartphone-img,
     .tablette-img,
     .ordinateur-img,
     .accessoires-img {
-      width: 250px;
+      width: 205px;
       transition: transform 0.3s ease;
       box-shadow: 3px 3px 3px grey;
       border-radius: 6px;

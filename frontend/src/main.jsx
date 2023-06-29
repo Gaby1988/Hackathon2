@@ -6,11 +6,18 @@ import "primereact/resources/themes/lara-light-teal/theme.css";
 import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
-import Login from "./pages/home/login";
+import Login from "../src/pages/home/Login";
 import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
+
+import AddPhone from "./pages/addPhone/AddPhone";
+import EvalPhone from "./pages/addPhone/EvalPhone";
+
+import LegalNotice from "./pages/LegalNotice";
+import AboutUs from "./pages/AboutUs";
+
 
 const router = createBrowserRouter([
   {
@@ -18,24 +25,41 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "/",
+        path: "/login",
         element: <Login />,
       },
       {
-        path: "/homepage",
+        path: "/",
         element: <HomePage />,
       },
       {
-        path: "/addProduct",
+        path: "/add-product",
         element: <AddProduct />,
       },
       {
-        path: "/phoneview",
+        path: "/list-article",
         element: <PhoneView />,
       },
       {
         path: "/phone-recap",
         element: <PageRecap />,
+      },
+      {
+
+        path: "/evaluation",
+        element: <AddPhone />,
+      },
+      {
+        path: "/questions",
+        element: <EvalPhone />,
+
+        path: "/legalNotice",
+        element: <LegalNotice />,
+      },
+      {
+        path: "/persons",
+        element: <AboutUs />,
+
       },
     ],
   },

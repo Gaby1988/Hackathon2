@@ -17,5 +17,25 @@ const createAdmin = async (register) => {
     throw new Error("Error creating your profil");
   }
 };
+const getByIdAdmin = async (id) => {
+  try {
+    const admin = await database.query(
+      "SELECT admins.email FROM admins WHERE id=?",
+      [id]
+    );
+    return admin[0];
+  } catch (error) {
+    throw new Error("Error retrieving admin");
+  }
+};
 
-module.exports = { createAdmin };
+const getAllAdmins = async () => {
+  try {
+    const admins = await database.query("SELECT * FROM admins");
+    return admins[0];
+  } catch (error) {
+    throw new Error("Error retrieving admin");
+  }
+};
+
+module.exports = { createAdmin, getByIdAdmin, getAllAdmins };

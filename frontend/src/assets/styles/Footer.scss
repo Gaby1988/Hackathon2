@@ -1,0 +1,52 @@
+.footer-containe {
+  width: 100%;
+  .footer {
+    display: flex;
+    height: 75px;
+    justify-content: start;
+    align-items: center;
+    padding: 0 1rem;
+    border-top: solid 2px #04acb0;
+    bottom: 0;
+    .FAQ{
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+    }
+    .Setting{
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+    }
+    .Hammer{
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+    }
+    .Persons{
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+    }
+
+    .questionFaq{
+        height: 2rem;
+        margin-right: 1rem;
+    }
+    .setting{
+        height: 2rem;
+        margin-right: 1rem;
+    }
+    .hammer{
+        height: 2.5rem;
+        margin-right: 1rem;
+    }
+    .persons{
+        height: 3rem;
+        margin-right: 1rem;
+    }
+    li{
+        color: $app-primary-font-color;
+    }
+  }
+}

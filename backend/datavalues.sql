@@ -1,7 +1,7 @@
 INSERT INTO 
     admin (email, password)
 VALUES 
-('gabyOne@gmail.com', 1234);
+('matthiasBGdelextreme@wildcodeschool.com', 1234);
 
 
 INSERT INTO 
