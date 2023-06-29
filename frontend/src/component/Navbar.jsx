@@ -18,7 +18,9 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav>
-        <img src={Logo} className="logo" alt="logo" />
+        <Link to="/home">
+          <img src={Logo} className="logo" alt="logo" />
+        </Link>
         <ul>
           {isAdmin && (
             <Link to="/add-product">
