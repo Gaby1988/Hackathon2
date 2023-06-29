@@ -1,0 +1,52 @@
+main {
+  height: initial;
+
+  .arrowBack {
+    display: flex;
+    margin-top: 2rem;
+    .arrow {
+      height: 2rem;
+      margin-left: 1rem;
+    }
+    .backArrow {
+      color: $app-third-font-color;
+      margin-left: 0.4rem;
+      margin-top: 0.1rem;
+    }
+  }
+
+  .titleAddProduct {
+    color: $app-third-font-color;
+    font-size: 2rem;
+    margin-left: 25rem;
+    margin-top: 3rem;
+    
+  }
+  .inputLogo {
+    display: flex;
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 30px;
+      .product {
+        height: 4rem;
+        border-radius: 5px;
+        margin-left: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .bulleLogo {
+    height: 65rem;
+    margin-left: 3rem;
+    margin-top: -3rem;
+    margin-right: -1rem;
+  }
+
+  .drop {
+    height: 30rem;
+  }
+}
