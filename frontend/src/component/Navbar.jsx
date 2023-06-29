@@ -16,7 +16,7 @@ function Navbar() {
           <Link to="/list-article">
             <li>Liste des articles</li>
           </Link>
-          <Link to="/login">
+          <Link to="/">
             <li className="titleConnection">Connexion</li>
           </Link>
         </ul>
