@@ -18,7 +18,9 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav>
-        <img src={Logo} className="logo" alt="logo" />
+        <Link to="/">
+          <img src={Logo} className="logo" alt="logo" />
+        </Link>
         <ul>
           {isAdmin && (
             <Link to="/add-product">
@@ -26,7 +28,7 @@ function Navbar() {
             </Link>
           )}
           <>
-            <Link to="/list-article">
+            <Link to="/addPhone">
               <li>Estimer des articles</li>
             </Link>
             <Link to="/list-article">
