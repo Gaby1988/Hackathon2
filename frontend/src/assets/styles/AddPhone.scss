@@ -26,6 +26,14 @@
   }
 
   .right-side-page-container {
+    margin-top: 2rem;
     padding-left: 6rem;
+
+    .footerQuestions button{
+      height: 2rem;
+      width: 5rem;
+      margin-left: 1rem;
+      margin-top: 2rem; 
+    }
   }
 }
