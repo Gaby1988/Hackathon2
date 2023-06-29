@@ -1,18 +1,12 @@
 import React from "react";
-import Arrow from "../assets/pictures/arrow.png";
 import Bulles from "../assets/pictures/Bulles.png";
 import Drop from "../component/Drop";
-import { Link } from "react-router-dom";
+import BackArrow from "../component/BackArrow";
 
 function AddProduct() {
   return (
     <>
-      <Link to="/home">
-        <div className="arrowBack">
-          <img src={Arrow} className="arrow" alt="flèche retour" />
-          <h3 className="backArrow">Retour</h3>
-        </div>
-      </Link>
+      <BackArrow />
       <h2 className="titleAddProduct">AJOUTER UN ARTICLE</h2>
       <div className="inputLogo">
         <div className="input-container">
