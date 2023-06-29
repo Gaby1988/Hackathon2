@@ -8,6 +8,7 @@ import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
 import Home from "./pages/home/Home";
 import Login from "./pages/home/login";
+import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
+        path: "/homepage",
+        element: <HomePage />,
+      },  
+      {
         path: "/addProduct",
         element: <AddProduct />
       },
@@ -36,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/phone-recap",
         element: <PageRecap />,
-      },
+     },
     ],
   },
 ]);
