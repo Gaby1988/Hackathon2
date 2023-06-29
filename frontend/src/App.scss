@@ -2,6 +2,7 @@
 @import "../src/assets/mixins/mixins.scss";
 @import "../src/assets/styles/login.scss";
 @import "../src/assets/styles/navbar.scss";
+@import "../src/assets/styles/homepage.scss";
 
 * {
   margin: 0;
@@ -19,7 +20,7 @@ body {
 }
 
 h1 {
-  font-family: $app-secondary-font;
+  font-family: $app-primary-font;
 }
 
 h2 {
@@ -41,7 +42,7 @@ select,
 button,
 ul,
 li {
-  font-family: $app-secondary-font;
+  font-family: $app-primary-font;
   font-weight: 600;
 }
 
