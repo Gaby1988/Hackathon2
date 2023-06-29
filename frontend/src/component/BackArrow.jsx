@@ -8,18 +8,14 @@ function BackArrow() {
     <div className="back-arrow-container">
       <button
         className="back-arrow-button"
+        style={{ cursor: "pointer" }}
         type="button"
         onClick={() => {
           navigate(-1);
         }}
       >
         <p>Retour</p>
-        <img
-          className="arrow"
-          src={backArrow}
-          alt="back"
-          style={{ cursor: "pointer" }}
-        />
+        <img className="arrow" src={backArrow} alt="back" />
       </button>
     </div>
   );

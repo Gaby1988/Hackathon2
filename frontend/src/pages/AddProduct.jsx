@@ -5,7 +5,7 @@ import Drop from "../component/Drop";
 
 function AddProduct() {
   return (
-    <main>
+    <>
       <div className="arrowBack">
         <img src={Arrow} className="arrow" alt="flèche retour" />
         <h3 className="backArrow">Retour</h3>
@@ -61,7 +61,7 @@ function AddProduct() {
         </div>
         <img src={Bulles} className="bulleLogo" alt="décoration avec le logo" />
       </div>
-    </main>
+    </>
   );
 }
 export default AddProduct;

@@ -1,15 +1,14 @@
 .phoneDistpacthViewAllWithPrice {
-  width: 390px;
-  height: 450px;
+  @include background-radius-height-width;z-index: 20;
   margin: 25px auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   .figureForImage {
-    height: 50%;
-    width: 50%;
+    width: 75%;
     .imagePhone {
+      mix-blend-mode: multiply;
       height: 100%;
       width: 100%;
     }
