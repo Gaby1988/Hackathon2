@@ -4,11 +4,16 @@
 /* -----------------------------import Pages -------------------------------- */
 
 @import "../src/assets/styles/AddPhone.scss";
+@import "../src/assets/styles/AddProduct.scss";
 @import "../src/assets/styles/PageRecap.scss";
+
 
 /* -----------------------------import components -------------------------------- */
 @import "../src/assets/styles/login.scss";
 @import "../src/assets/styles/navbar.scss";
+@import "../src/assets/styles/Footer.scss";
+@import "../src/assets/styles/homepage.scss";
+@import "../src/assets/styles/Drop.scss";
 @import "../src/assets/styles/PhoneView.scss";
 @import "../src/assets/styles/PhoneDistpacthViewAllWithPrice.scss";
 @import "../src/assets/styles/BackArrow.scss";
@@ -29,7 +34,7 @@ body {
 }
 
 h1 {
-  font-family: $app-secondary-font;
+  font-family: $app-primary-font;
 }
 
 h2 {
@@ -40,8 +45,20 @@ h3 {
   @include font-subheading-phone;
 }
 
-p {
- 
+#root {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+
+header,
+footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+}
+
+main {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
 
 input,
@@ -51,7 +68,7 @@ select,
 button,
 ul,
 li {
-  font-family: $app-secondary-font;
+  font-family: $app-primary-font;
   font-weight: 600;
 }
 

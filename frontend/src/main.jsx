@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.scss";
-import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/themes/lara-light-teal/theme.css";
 import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
-import Home from "./pages/home/Home";
 import Login from "./pages/home/Login";
+import HomePage from "./pages/home/HomePage";
+import AddProduct from "./pages/AddProduct";
+import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
 
 const router = createBrowserRouter([
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <Home />,
+        element: <HomePage />,
       },
       {
         path: "/evaluation",
@@ -29,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/list-article",
-        element: <PageRecap />,
+        element: <PhoneView />,
       },
       {
         path: "/phone-recap",
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-product",
-        element: <PageRecap />,
+        element: <AddProduct />,
       },
     ],
   },
