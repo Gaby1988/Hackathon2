@@ -1,0 +1,17 @@
+.phoneDistpacthViewAllWithPrice {
+  width: 390px;
+  height: 450px;
+  margin: 25px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .figureForImage {
+    height: 50%;
+    width: 50%;
+    .imagePhone {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
