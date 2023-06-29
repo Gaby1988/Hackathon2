@@ -66,103 +66,130 @@ function AddPhone() {
     },
   ];
 
-  //calcul price
-  const calculatePrice = () => {
-    setBasePrice(500); // Prix de base
-    switch (brand) {
+  const handlePriceWithBrand = (currentBrand) => {
+    let result = price;
+    switch (currentBrand) {
       case "Apple":
-        setBasePrice((prev) => (prev += 200));
+        result = result + 200;
         break;
       case "Samsung":
-        setBasePrice((prev) => (prev += 150));
+        result = result + 150;
         break;
       case "Huawei":
-        setBasePrice((prev) => (prev += 100));
+        result = result + 100;
         break;
       case "Oppo":
-        setBasePrice((prev) => (prev += 50));
+        result = result + 50;
         break;
       case "Other":
-        setBasePrice((prev) => (prev += 25));
+        result = result + 25;
         break;
       default:
         break;
     }
-    switch (model) {
-      case "'iPhone X' || model === 'Galaxy S9' || model === 'Oppo Reno 4' || model === 'Huawei P30'":
-        setBasePrice((prev) => (prev += 100));
-        break;
-      case "'iPhone XS' || model === 'Galaxy S10' || model === 'Oppo Find X2' || model === 'Huawei Mate 20 Pro":
-        setBasePrice((prev) => (prev += 80));
-        break;
-      case "Huawei P 20":
-        setBasePrice((prev) => (prev += 50));
-        break;
-      case "Oppo Find X2 Pro":
-        setBasePrice((prev) => (prev += 25));
-        break;
-      case "Other":
-        setBasePrice((prev) => (prev += 12));
-        break;
-      default:
-        break;
-    }
-    switch (storageCapacity) {
-      case "16GB":
-        setBasePrice((prev) => (prev += 6));
-        break;
-      case "32GB":
-        setBasePrice((prev) => (prev += 12));
-        break;
-      case "64GB":
-        setBasePrice((prev) => (prev += 25));
-        break;
-      case "128GB":
-        setBasePrice((prev) => (prev += 50));
-        break;
-      case "256GB":
-        setBasePrice((prev) => (prev += 100));
-        break;
-      default:
-        break;
-    }
-    switch (condition) {
-      case "Excellent":
-        setBasePrice((prev) => (prev += 100));
-        break;
-      case "Good":
-        setBasePrice((prev) => (prev += 50));
-        break;
-      case "Mauvais":
-        setBasePrice((prev) => (prev += 25));
-        break;
-      case "Other":
-        setBasePrice((prev) => (prev += 0));
-        break;
-      default:
-        break;
-    }
-    switch (ram) {
-      case "2GB":
-        setBasePrice((prev) => (prev += 25));
-        break;
-      case "4GB":
-        setBasePrice((prev) => (prev += 50));
-        break;
-      case "8GB":
-        setBasePrice((prev) => (prev += 100));
-        break;
-      case "16GB":
-        setBasePrice((prev) => (prev += 150));
-        break;
-      default:
-        break;
-    }
-    setPrice(basePrice);
+    return result;
   };
 
-  console.log(price);
-  console.log(basePrice);
+  const handlePriceWithModel = (currentModel, price) => {
+    let result = price;
+    switch (currentModel) {
+      case "iPhone X" || "Galaxy S9" || "Oppo Reno 4" || "Huawei P30":
+        result = result + 100;
+        break;
+      case "iPhone XS" ||
+        "Galaxy S10" ||
+        "Oppo Find X2" ||
+        "Huawei Mate 20 Pro":
+        result = result + 80;
+        break;
+      case "Huawei P 20":
+        result = result + 50;
+        break;
+      case "Oppo Find X2 Pro":
+        result = result + 25;
+        break;
+      case "Other":
+        result = result + 12;
+        break;
+      default:
+        break;
+    }
+    return result;
+  };
+
+  const handlePriceWithCapacity = (currentCapacity, price) => {
+    let result = price;
+    switch (currentCapacity) {
+      case "16GB":
+        result = result + 6;
+        break;
+      case "32GB":
+        result = result + 12;
+        break;
+      case "64GB":
+        result = result + 25;
+        break;
+      case "128GB":
+        result = result + 50;
+        break;
+      case "256GB":
+        result = result + 100;
+        break;
+      default:
+        break;
+    }
+    return result;
+  };
+
+  const handlePriceWithCondition = (currentCondition, price) => {
+    let result = price;
+    switch (currentCondition) {
+      case "Excellent":
+        result = result + 100;
+        break;
+      case "Good":
+        result = result + 50;
+        break;
+      case "Mauvais":
+        result = result + 25;
+        break;
+      default:
+        console.log("current", currentCondition);
+        break;
+    }
+    return result;
+  };
+
+  const handlePriceWithRam = (currentRam, price) => {
+    let result = price;
+    switch (currentRam) {
+      case "2GB":
+        result = result + 25;
+        break;
+      case "4GB":
+        result = result + 50;
+        break;
+      case "8GB":
+        result = result + 100;
+        break;
+      case "16GB":
+        result = result + 150;
+        break;
+      default:
+        break;
+    }
+    return result;
+  };
+
+  //calcul price
+  const calculatePrice = () => {
+    const priceBrand = handlePriceWithBrand(brand);
+    const priceModel = handlePriceWithModel(model, priceBrand);
+    const priceCapacity = handlePriceWithCapacity(storageCapacity, priceModel);
+    const priceRam = handlePriceWithRam(ram, priceCapacity);
+    const priceCondition = handlePriceWithCondition(condition, priceRam);
+    setPrice(priceCondition);
+  };
 
   return (
     <div className="add-phone-container">
@@ -208,14 +235,7 @@ function AddPhone() {
             >
               next
             </button>
-            <Link to="/phone-recap">
-              <button>suivant</button>
-            </Link>
             <button onClick={calculatePrice}>Calculer le prix</button>
-            <div>
-              <label>Prix:</label>
-              <span>{price} €</span>
-            </div>
           </div>
         </div>
       </div>
