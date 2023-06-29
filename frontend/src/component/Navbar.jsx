@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav>
-        <Link to="/home">
+        <Link to="/">
           <img src={Logo} className="logo" alt="logo" />
         </Link>
         <ul>
@@ -28,7 +28,7 @@ function Navbar() {
             </Link>
           )}
           <>
-            <Link to="/list-article">
+            <Link to="/addPhone">
               <li>Estimer des articles</li>
             </Link>
             <Link to="/list-article">
