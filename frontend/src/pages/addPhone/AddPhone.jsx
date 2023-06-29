@@ -4,6 +4,8 @@ import EvalCapacity from "./EvalCapacity";
 import EvalCondition from "./EvalCondition";
 import ordiTabletPhone from "../../assets/pictures/ordi-tablet-tel.png";
 
+import { Steps } from "primereact/steps";
+
 function AddPhone() {
   const [page, setPage] = useState(0);
   const [brand, setBrand] = useState("");
@@ -16,36 +18,42 @@ function AddPhone() {
 
   const formTitle = ["model", "capacity", "condition"];
 
-  //page display questions
-  const pageDisplay = () => {
-    if (page === 0) {
-      return (
+  const [activeIndex, setActiveIndex] = useState(0); // Start with the first step (index 0)
+
+  const items = [
+    {
+      label: "Step 1",
+      component: (
         <EvalModel
           brand={brand}
           setBrand={setBrand}
           model={model}
           setModel={setModel}
         />
-      );
-    } else if (page === 1) {
-      return (
+      ),
+    },
+    {
+      label: "Step 2",
+      component: (
         <EvalCapacity
           storageCapacity={storageCapacity}
           setStorageCapacity={setStorageCapacity}
           ram={ram}
           setRam={setRam}
         />
-      );
-    } else {
-      return (
+      ),
+    },
+    {
+      label: "Step 3",
+      component: (
         <EvalCondition
           condition={condition}
           setCondition={setCondition}
           price={price}
         />
-      );
-    }
-  };
+      ),
+    },
+  ];
 
   //calcul price
   const calculatePrice = () => {
@@ -159,30 +167,33 @@ function AddPhone() {
         </div>
       </div>
       <div className="right-side-page-container">
+        <div className="card">
+          <Steps
+            model={items}
+            activeIndex={activeIndex}
+            onSelect={(e) => setActiveIndex(e.index)}
+            readOnly={false}
+          />
+          <div className="step-content">{items[activeIndex].component}</div>
+        </div>
         <div className="containerQuestionsAndStep">
-          <div className="questionsConatiner">
-            <div className="headerQuestions">
-              <h3>{formTitle[page]}</h3>
-            </div>
-            <div className="questions"> {pageDisplay()}</div>
-            <div className="footerQuestions">
-              <button
-                disabled={page === 0}
-                onClick={() => {
-                  setPage((currPage) => currPage - 1);
-                }}
-              >
-                prev
-              </button>
-              <button
-                disabled={page === formTitle.length - 1}
-                onClick={() => {
-                  setPage((currPage) => currPage + 1);
-                }}
-              >
-                next
-              </button>
-            </div>
+          <div className="footerQuestions">
+            <button
+              disabled={activeIndex === 0}
+              onClick={() => {
+                setActiveIndex((currPage) => currPage - 1);
+              }}
+            >
+              prev
+            </button>
+            <button
+              disabled={activeIndex === formTitle.length - 1}
+              onClick={() => {
+                setActiveIndex((currPage) => currPage + 1);
+              }}
+            >
+              next
+            </button>
           </div>
         </div>
       </div>
