@@ -4,7 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../pictures/Bulles.png");
+
+  img {
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
 
   form {
     display: flex;
@@ -33,5 +39,13 @@
 
   button {
     margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: $app-desktop-medium) {
+  .login-container {
+    img {
+      width: 38%;
+    }
   }
 }
