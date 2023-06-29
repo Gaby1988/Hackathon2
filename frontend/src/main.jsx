@@ -6,7 +6,6 @@ import "primereact/resources/themes/lara-light-teal/theme.css";
 import "primereact/resources/primereact.min.css";
 import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
-import Home from "./pages/home/Home";
 import Login from "./pages/home/login";
 import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
@@ -20,19 +19,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/login",
         element: <Login />,
       },
       {
         path: "/homepage",
         element: <HomePage />,
-      },  
+      },
       {
         path: "/addProduct",
-        element: <AddProduct />
+        element: <AddProduct />,
       },
       {
         path: "/phoneview",
@@ -41,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/phone-recap",
         element: <PageRecap />,
-     },
+      },
     ],
   },
 ]);
