@@ -31,7 +31,7 @@ export default function PageRecap() {
         </div>
       </div>
       <div className="prix">
-        <h3>Prix conseillé :</h3>
+        <h3>Prix conseillé : </h3>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@
   .dv-title {
     border: solid 2px rgb(11, 136, 26);
     display: flex;
-    margin: 5rem 0 4rem 9rem;
+    margin: 2rem 0 4rem 15rem;
     width: 100%;
   }
 }
@@ -32,9 +32,10 @@
   margin-left: 2rem;
   h3 {
     text-align: center;
-    margin: 4.5rem 0 2.5rem 0;
+    margin: 2.5rem 0 2.5rem 0;
   }
   h4 {
+    text-align: start;
     margin-bottom: 3rem;
   }
 
@@ -58,7 +59,11 @@
 
 .prix {
   border: solid 2px rgb(0, 179, 255);
-  width: 175px;
-  height: 30px;
-  margin: 3rem 3rem;
+  width: 350px;
+  height: 41px;
+  margin: 3rem 0rem;
+  
+  h3 {
+    font-size: 1.5rem;
+  }
 }
