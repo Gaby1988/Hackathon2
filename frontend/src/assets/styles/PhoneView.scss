@@ -5,10 +5,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
   column-gap: 100px;
+  border-radius: $app-phone-font-radius;
   justify-content: center;
   z-index: 10;
   overflow-y: scroll;
-  height: 80vh;
+  height: 70vh;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -21,6 +22,6 @@
 .phoneViewImageBulle {
   position: absolute;
   right: 0;
-  height: 80vh;
+  height: 65vh;
   background-size: contain;
 }
