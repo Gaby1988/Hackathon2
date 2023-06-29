@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { IsDesktopContext } from "../../contexts/IsDesktopContext";
+import { Link } from "react-router-dom";
 import EvalModel from "./EvalModel";
 import EvalCapacity from "./EvalCapacity";
 import EvalCondition from "./EvalCondition";
@@ -7,13 +9,22 @@ import ordiTabletPhone from "../../assets/pictures/ordi-tablet-tel.png";
 import { Steps } from "primereact/steps";
 
 function AddPhone() {
+  const {
+    brand,
+    setBrand,
+    model,
+    setModel,
+    storageCapacity,
+    setStorageCapacity,
+    condition,
+    setCondition,
+    ram,
+    setRam,
+    price,
+    setPrice,
+  } = useContext(IsDesktopContext);
+
   const [page, setPage] = useState(0);
-  const [brand, setBrand] = useState("");
-  const [model, setModel] = useState("");
-  const [storageCapacity, setStorageCapacity] = useState("");
-  const [condition, setCondition] = useState("");
-  const [ram, setRam] = useState("");
-  const [price, setPrice] = useState(0);
   const [basePrice, setBasePrice] = useState(0);
 
   const formTitle = ["model", "capacity", "condition"];
@@ -194,6 +205,10 @@ function AddPhone() {
             >
               next
             </button>
+            <Link to="/phone-recap">
+              <button>suivant</button>
+            </Link>
+            <div>{price}</div>
           </div>
         </div>
       </div>
