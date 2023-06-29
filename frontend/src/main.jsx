@@ -11,6 +11,8 @@ import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
+import LegalNotice from "./pages/LegalNotice";
+import AboutUs from "./pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: "/phone-recap",
         element: <PageRecap />,
+      },
+      {
+        path: "/legalNotice",
+        element: <LegalNotice />,
+      },
+      {
+        path: "/persons",
+        element: <AboutUs />,
       },
     ],
   },

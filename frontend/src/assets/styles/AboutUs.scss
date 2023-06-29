@@ -1,0 +1,41 @@
+.logoAboutUs {
+  height: 2.5rem;
+}
+.titleAboutUs {
+  font-size: 3rem;
+  color: $app-third-font-color;
+}
+
+.team {
+  .photoTeam {
+    height: 12rem;
+    border-radius: 5px;
+    width: 10rem;
+    gap: 5rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+
+  .card {
+    cursor: pointer;
+    width: 10rem;
+
+    // back of card
+    .card-back {
+      display: flex;
+      transition: all ease-in 0.2s;
+      transition-delay: 0.2s;
+      width: 10rem;
+      height: 12rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .flipped .card-back {
+      transform: rotateY(90deg);
+      transition-delay: 0s;
+    }
+  }
+}
