@@ -4,15 +4,12 @@ import PropTypes from "prop-types";
 export const IsDesktopContext = createContext();
 
 export function IsDesktopProvider({ children }) {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const contextValueIsDesktop = useMemo(() => ({ isDesktop }), [isDesktop]);
+  const contextValueIsDesktop = useMemo(
+    () => ({ isAdmin, setIsAdmin }),
+    [isAdmin]
+  );
 
   return (
     <IsDesktopContext.Provider value={contextValueIsDesktop}>
