@@ -1,19 +1,28 @@
 .navbar-containe {
   width: 100%;
-
+  
   nav {
     display: flex;
-    height: 70px;
+    height: 75px;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    border-bottom:solid 2px #04ACB0;
+    .logo {
+      height: 5rem;
+      margin-top: 1rem;
+    }
   }
 
   ul {
     display: flex;
-
+    
     li {
-      margin-left: 1rem;
+      margin-left: 3rem;
+      color: #04ACB0;
+    }
+    .titleConnection{
+      color: #FFAB1E;
     }
   }
 }

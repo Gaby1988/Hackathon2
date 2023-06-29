@@ -1,14 +1,51 @@
 .login-container {
   height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img {
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
 
   form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 30vh;
+    height: 43vh;
+    margin-top: 2rem;
+    width: 40%;
+
+    label {
+      width: 100%;
+    }
+
+    .input-text {
+      width: 100%;
+    }
+    .p-password {
+      width: 100%;
+    }
+
+    .p-inputtext {
+      width: 100%;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: $app-desktop-medium) {
+  .login-container {
+    img {
+      width: 38%;
+    }
   }
 }

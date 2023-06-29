@@ -8,6 +8,8 @@ $app-primary-font: "Fira", sans-serif;
 $app-primary-font-color: #04acb0;
 $app-secondary-font-color: #ffab1e;
 $app-supporting-color2: #eeeeee;
+$app-third-font-color: #272350;
+
 
 /* Website Background */
 $app-bg-color: white;
@@ -30,19 +32,19 @@ $font-size-list-burger-tablet: 38px;
 
 @mixin font-title-phone {
   font-family: $app-primary-font;
-  color: $app-primary-font-color;
+  color: $app-secondary-font-color;
   font-weight: 600;
 }
 
 @mixin font-title-tablet {
   font-family: $app-primary-font;
-  color: $app-primary-font-color;
+  color: $app-secondary-font-color;
   font-weight: 600;
 }
 
 @mixin font-title-desktop {
   font-family: $app-primary-font;
-  color: $app-primary-font-color;
+  color: $app-secondary-font-color;
   font-weight: 600;
 }
 
