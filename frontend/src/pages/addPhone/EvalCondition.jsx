@@ -11,10 +11,6 @@ function EvalCondition({ condition, setCondition, price }) {
         <option value="Mauvais">Mauvais état</option>
         <option value="Other">Autre</option>
       </select>
-      <div>
-        <label>Prix:</label>
-        <span>{price} €</span>
-      </div>
     </div>
   );
 }
