@@ -10,7 +10,7 @@ function HomePage() {
     <div className="container">
       <h2>Choisissez votre appareil</h2>
       <div className="container-appareils">
-        <Link to="">
+        <Link to="/evaluation">
           <div className="smartphone">
             <h3>Smartphone</h3>
             <img
@@ -20,18 +20,26 @@ function HomePage() {
             />
           </div>
         </Link>
-        <div className="tablette">
-          <h3>Tablette</h3>
-          <img className="tablette-img" src={Tablette} alt="" />
-        </div>
-        <div className="ordinateur">
-          <h3>Ordinateur</h3>
-          <img className="ordinateur-img" src={Ordinateur} alt="" />
-        </div>
-        <div className="accessoires">
-          <h3>Accessoire</h3>
-          <img className="accessoires-img" src={Accessoires} alt="" />
-        </div>
+        <Link to="/evaluation">
+          <div className="tablette">
+            <h3>Tablette</h3>
+            <img className="tablette-img" src={Tablette} alt="" />
+          </div>
+        </Link>
+
+        <Link to="/evaluation">
+          <div className="ordinateur">
+            <h3>Ordinateur</h3>
+            <img className="ordinateur-img" src={Ordinateur} alt="" />
+          </div>
+        </Link>
+
+        <Link to="/evaluation">
+          <div className="accessoires">
+            <h3>Accessoire</h3>
+            <img className="accessoires-img" src={Accessoires} alt="" />
+          </div>
+        </Link>
       </div>
     </div>
   );

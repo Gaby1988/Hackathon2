@@ -11,6 +11,7 @@
 /* -----------------------------import components -------------------------------- */
 @import "../src/assets/styles/login.scss";
 @import "../src/assets/styles/navbar.scss";
+@import "../src/assets/styles/Footer.scss";
 @import "../src/assets/styles/homepage.scss";
 @import "../src/assets/styles/Drop.scss";
 @import "../src/assets/styles/PhoneView.scss";
@@ -44,8 +45,20 @@ h3 {
   @include font-subheading-phone;
 }
 
-p {
- 
+#root {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+
+header,
+footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+}
+
+main {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
 
 input,

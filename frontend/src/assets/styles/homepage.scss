@@ -2,7 +2,7 @@
   background-image: url("../../../src/assets/pictures/background-pagehome.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 74vh;
   h2 {
     text-align: center;
     padding-bottom: 25px;
@@ -15,13 +15,13 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 140px;
+    margin-right: 140px;
     .smartphone-img,
     .tablette-img,
     .ordinateur-img,
     .accessoires-img {
-      width: 250px;
+      width: 207px;
       transition: transform 0.3s ease;
       box-shadow: 3px 3px 3px grey;
       border-radius: 6px;

@@ -62,6 +62,8 @@ function Login() {
             type="submit"
             onClick={handleSubmit}
           >
+        <Link to="/home">
+          <button className="primary-button" type="submit">
             connexion
           </button>
         </Link>
