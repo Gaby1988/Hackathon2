@@ -1,19 +1,64 @@
 .page-recap-container {
-  h2 {
+  border: solid 2px red;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  .background-img {
+    height: 64vh;
+    position: absolute;
+    right: -34px;
+    top: 5rem;
+    z-index: -1;
+  }
+
+  .dv-backArrow {
+    width: 100%;
     text-align: center;
-    margin-top: 5%;
+  }
+
+  .dv-title {
+    border: solid 2px rgb(11, 136, 26);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.dv-phone {
+  border: solid 2px orange;
+  width: 56%;
+  display: flex;
+  margin-top: 8rem;
+  h3 {
+    text-align: center;
+    margin: 4.5rem 0 2.5rem 0;
+  }
+  h4 {
+    margin-bottom: 3rem;
+  }
+
+  .figure-phone {
+    border: solid 2px rgb(0, 21, 255);
+    width: 284px;
+    height: 222px;
+
+    .phone-img {
+      border: solid 2px rgb(21, 255, 0);
+      height: 130%;
+      margin-top: 4rem;
+    }
+  }
+
+  .dv-phone-details {
+    border: solid 2px rgb(255, 0, 111);
+    width: 50%;
   }
 }
 
-.background-image {
-  border: solid 1px red;
-  width: 100%;
-  height: 74vh;
-  overflow: hidden;
-  text-align: end;
-  text-align: end;
-  z-index: -1;
-  img {
-    width: 60%;
-  }
+.prix {
+  border: solid 2px rgb(0, 179, 255);
+  width: 175px;
+  height: 30px;
+  margin: 3rem 3rem;
 }
