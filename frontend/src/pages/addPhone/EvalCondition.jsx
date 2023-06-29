@@ -1,6 +1,6 @@
 import React from "react";
 
-function EvalCondition({ condition, setCondition }) {
+function EvalCondition({ condition, setCondition, price }) {
   return (
     <div>
       <label>État général:</label>
@@ -11,6 +11,10 @@ function EvalCondition({ condition, setCondition }) {
         <option value="Mauvais">Mauvais état</option>
         <option value="Other">Autre</option>
       </select>
+      <div>
+        <label>Prix:</label>
+        <span>{price} €</span>
+      </div>
     </div>
   );
 }

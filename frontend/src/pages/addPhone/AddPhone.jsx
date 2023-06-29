@@ -1,11 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import EvalModel from "./EvalModel";
 import EvalCapacity from "./EvalCapacity";
 import EvalCondition from "./EvalCondition";
 import ordiTabletPhone from "../../assets/pictures/ordi-tablet-tel.png";
-
-import { Steps } from "primereact/steps";
-import { Toast } from "primereact/toast";
 
 function AddPhone() {
   const [page, setPage] = useState(0);
@@ -17,43 +14,7 @@ function AddPhone() {
   const [price, setPrice] = useState(0);
   const [basePrice, setBasePrice] = useState(0);
 
-  const [activeIndex, setActiveIndex] = useState(1);
-  const toast = useRef(null);
-
   const formTitle = ["model", "capacity", "condition"];
-
-  const items = [
-    {
-      label: "Modèle",
-      command: (event) => {
-        toast.current.show({
-          severity: "info",
-          summary: "First Step",
-          detail: event.item.label,
-        });
-      },
-    },
-    {
-      label: "Capacité",
-      command: (event) => {
-        toast.current.show({
-          severity: "info",
-          summary: "Second Step",
-          detail: event.item.label,
-        });
-      },
-    },
-    {
-      label: "Condition",
-      command: (event) => {
-        toast.current.show({
-          severity: "info",
-          summary: "Last Step",
-          detail: event.item.label,
-        });
-      },
-    },
-  ];
 
   //page display questions
   const pageDisplay = () => {
@@ -77,7 +38,11 @@ function AddPhone() {
       );
     } else {
       return (
-        <EvalCondition condition={condition} setCondition={setCondition} />
+        <EvalCondition
+          condition={condition}
+          setCondition={setCondition}
+          price={price}
+        />
       );
     }
   };
@@ -176,6 +141,7 @@ function AddPhone() {
     }
     setPrice(basePrice);
   };
+
   return (
     <div className="add-phone-container">
       <div className="left-side-page-container">
@@ -193,15 +159,6 @@ function AddPhone() {
         </div>
       </div>
       <div className="right-side-page-container">
-        <div className="card">
-          <Toast ref={toast}></Toast>
-          <Steps
-            model={items}
-            activeIndex={activeIndex}
-            onSelect={(e) => setActiveIndex(e.index)}
-            readOnly={false}
-          />
-        </div>
         <div className="containerQuestionsAndStep">
           <div className="questionsConatiner">
             <div className="headerQuestions">
