@@ -208,7 +208,11 @@ function AddPhone() {
             <Link to="/phone-recap">
               <button>suivant</button>
             </Link>
-            <div>{price}</div>
+            <button onClick={calculatePrice}>Calculer le prix</button>
+            <div>
+              <label>Prix:</label>
+              <span>{price} €</span>
+            </div>
           </div>
         </div>
       </div>
