@@ -25,7 +25,7 @@ function AddPhone() {
   } = useContext(IsDesktopContext);
 
   const [page, setPage] = useState(0);
-  const [basePrice, setBasePrice] = useState(0);
+  const [basePrice, setBasePrice] = useState(500);
 
   const formTitle = ["model", "capacity", "condition"];
 
