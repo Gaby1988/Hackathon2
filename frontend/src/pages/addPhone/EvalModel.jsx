@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function EvalModel({ brand, model, setBrand, setModel }) {
   const [showModelOptions, setShowModelOptions] = useState(false);

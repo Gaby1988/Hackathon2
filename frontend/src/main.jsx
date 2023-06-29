@@ -11,14 +11,12 @@ import HomePage from "./pages/home/HomePage";
 import AddProduct from "./pages/AddProduct";
 import PhoneView from "./pages/PhoneView";
 import PageRecap from "./pages/PageRecap";
-
 import AddPhone from "./pages/addPhone/AddPhone";
 import EvalPhone from "./pages/addPhone/EvalPhone";
 import EvalModel from "./pages/addPhone/EvalModel";
 
 import LegalNotice from "./pages/LegalNotice";
 import AboutUs from "./pages/AboutUs";
-
 
 const router = createBrowserRouter([
   {
@@ -46,7 +44,6 @@ const router = createBrowserRouter([
         element: <PageRecap />,
       },
       {
-
         path: "/evaluation",
         element: <AddPhone />,
       },
@@ -65,7 +62,6 @@ const router = createBrowserRouter([
       {
         path: "/persons",
         element: <AboutUs />,
-
       },
     ],
   },

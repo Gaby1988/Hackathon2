@@ -10,7 +10,7 @@ export function IsDesktopProvider({ children }) {
   const [storageCapacity, setStorageCapacity] = useState("");
   const [condition, setCondition] = useState("");
   const [ram, setRam] = useState("");
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(500);
 
   const contextValueIsDesktop = useMemo(
     () => ({
