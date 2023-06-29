@@ -1,4 +1,4 @@
-import React from "react" ;
+import React from "react";
 import Bulles from "../assets/pictures/Bulles.png";
 import Drop from "../component/Drop";
 import BackArrow from "../component/BackArrow";

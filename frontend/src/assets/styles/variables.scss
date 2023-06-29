@@ -10,13 +10,12 @@ $app-secondary-font-color: #ffab1e;
 $app-supporting-color2: #eeeeee;
 $app-third-font-color: #272350;
 
-
 /* Website Background */
 $app-bg-color: white;
 $app-bg-color-button: #02c0c4;
 $app-color-button: white;
-$app-text-p: black;
-$app-phone-font-color: #D9D9D9;
+$app-text-p: #272350;
+$app-phone-font-color: #d9d9d9;
 $app-phone-font-radius: 20px;
 
 /* Media query */
@@ -162,7 +161,6 @@ $font-size-list-burger-tablet: 38px;
     background-color: $app-bg-color-button;
   }
 }
-
 
 @mixin background-radius-height-width {
   background-color: $app-phone-font-color;
