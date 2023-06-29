@@ -46,7 +46,7 @@ function Login() {
             toggleMask
           />
         </label>
-        <Link to="/homepage">
+        <Link to="/home">
           <button className="primary-button" type="submit">
             connexion
           </button>

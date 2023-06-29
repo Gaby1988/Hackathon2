@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function AddProduct() {
   return (
     <>
-      <Link to="/evaluation">
+      <Link to="/home">
         <div className="arrowBack">
           <img src={Arrow} className="arrow" alt="flèche retour" />
           <h3 className="backArrow">Retour</h3>
