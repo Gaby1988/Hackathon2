@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/pictures/Logo.png";
+import api from "../services/api";
 
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogin = () => {
     setIsLoggedIn(!isLoggedIn);
   };
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    api.get("/admin").then((response) => {
+      setData(response.data);
+    });
+  }, []);
+
+  console.info(data);
+
   return (
     <div className="navbar-container">
       <nav>
@@ -22,15 +32,11 @@ function Navbar() {
             <li>Estimer des articles</li>
           </Link>
           {!isLoggedIn && (
-            <button
-              className="button-connexion"
-              type="button"
-              onClick={handleLogin}
-            >
-              <Link to="/connection">
-                <li className="titleConnection">Connexion</li>
-              </Link>
-            </button>
+            <Link to="/">
+              <li className="titleConnection" onClick={handleLogin}>
+                Connexion
+              </li>
+            </Link>
           )}
         </ul>
       </nav>
