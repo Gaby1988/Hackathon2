@@ -8,6 +8,7 @@ import { IsDesktopProvider } from "./contexts/IsDesktopContext";
 import Root from "./routes/Root";
 import Home from "./pages/home/Home";
 import Login from "./pages/home/login";
+import PhoneView from "./pages/PhoneView";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/phoneview",
+        element: <PhoneView />,
       },
     ],
   },
