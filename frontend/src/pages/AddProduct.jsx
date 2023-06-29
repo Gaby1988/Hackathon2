@@ -1,15 +1,12 @@
-import React from "react" ;
-import Arrow from "../assets/pictures/arrow.png";
+import React from "react";
 import Bulles from "../assets/pictures/Bulles.png";
 import Drop from "../component/Drop";
+import BackArrow from "../component/BackArrow";
 
 function AddProduct() {
   return (
     <>
-      <div className="arrowBack">
-        <img src={Arrow} className="arrow" alt="flèche retour" />
-        <h3 className="backArrow">Retour</h3>
-      </div>
+      <BackArrow />
       <h2 className="titleAddProduct">AJOUTER UN ARTICLE</h2>
       <div className="inputLogo">
         <div className="input-container">
