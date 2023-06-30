@@ -2,21 +2,26 @@
   background-image: url("../../../src/assets/pictures/background-pagehome.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 74vh;
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   h2 {
     text-align: center;
     padding-bottom: 25px;
-    padding-top: 25px;
     color: $app-secondary-font-color;
   }
   .container-appareils {
     display: grid;
-    grid-template-rows: 1fr 1.5fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 3rem;
+    width: 60%;
     justify-items: center;
     align-items: center;
-    margin-left: 140px;
-    margin-right: 140px;
+
+    margin-top: 1rem;
     .smartphone-img,
     .tablette-img,
     .ordinateur-img,
@@ -35,12 +40,13 @@
     .tablette-img,
     .ordinateur-img,
     .accessoires-img {
-        opacity: 0.5;
+      opacity: 0.5;
     }
     h3 {
       color: $app-primary-font-color;
       font-weight: bold;
       text-align: center;
+      margin: 0 0 1rem 0;
     }
   }
 }

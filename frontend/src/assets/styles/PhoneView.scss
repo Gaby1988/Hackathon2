@@ -1,21 +1,23 @@
 .phoneView {
-    position: relative;
-    padding: 0 10vw 0 10vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-    column-gap: 100px;
-    justify-content: center;
-    z-index: 10;
-    .arrowBack {
-        display: flex;
-        border: 2px solid black;
-        height: 50px;
-    }
-    .phoneViewImageBulle {
-        position: absolute;
-        right: 0;
-        height: 80vh;
-        background-size: contain;
-    }
+  position: relative;
+  padding: 0 10vw 0 10vw;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  column-gap: 100px;
+  row-gap: 1.2em;
+  justify-content: center;
+  z-index: 10;
+
+  .arrowBack {
+    display: flex;
+    border: 2px solid black;
+    height: 50px;
+  }
+  .phoneViewImageBulle {
+    position: absolute;
+    right: 0;
+    height: 80vh;
+    background-size: contain;
+  }
 }
