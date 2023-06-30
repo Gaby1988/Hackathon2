@@ -9,8 +9,7 @@ main {
   .titleAddProduct {
     color: $app-third-font-color;
     font-size: 2rem;
-    margin-right: 70rem;
-    margin-top: 3rem;
+    margin: 3rem 50rem 0 0;
   }
   .inputLogo {
     display: flex;
@@ -20,6 +19,7 @@ main {
       flex-direction: column;
       width: 50%;
       gap: 30px;
+      margin: 0 0 0 2rem;
       .product {
         height: 4rem;
         border-radius: 5px;
@@ -36,10 +36,10 @@ main {
     margin-right: -1rem;
   }
 
-  .ButtonValid{
+  .ButtonValid {
     margin-bottom: 2rem;
   }
-    .drop {
-      height: 30rem;
-    }
+  .drop {
+    height: 30rem;
+  }
 }

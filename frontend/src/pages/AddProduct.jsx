@@ -57,7 +57,7 @@ function AddProduct() {
             <option value="très bon état">Très bon état</option>
             <option value="neuf">Neuf</option>
           </select>
-          <Drop className="drop"/>
+          <Drop className="drop" />
           <div className="ButtonValid">
             <Link to="/list-article">
               <button className="primary-button">Valider</button>

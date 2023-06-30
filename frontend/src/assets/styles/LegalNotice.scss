@@ -1,18 +1,19 @@
-.logoEmmaus{
-    height: 15rem;
+.logoEmmaus {
+  height: 15rem;
+  margin-top: 1rem;
 }
 
-.titleLegalNotice{
-    font-size: 2rem;
-    color: $app-third-font-color;
-    text-align: start;
-    margin-left: 20rem;
-    margin-top: 3rem;
+.titleLegalNotice {
+  font-size: 2rem;
+  color: $app-third-font-color;
+  text-align: start;
+  margin-left: 20rem;
+  margin-top: 3rem;
 }
 
-.paragraphLegalNotice{
-    font-size: 1.3rem;
-    color: $app-third-font-color;
-    text-align: start;
-    margin-left: 20rem;
+.paragraphLegalNotice {
+  font-size: 1.3rem;
+  color: $app-third-font-color;
+  text-align: start;
+  margin: 0 0 2rem 20rem;
 }

@@ -1,5 +1,6 @@
 .logoAboutUs {
-  height: 2.5rem;
+  margin-top: 1.5rem;
+  height: 15rem;
 }
 .titleAboutUs {
   font-size: 3rem;
@@ -13,6 +14,10 @@
     width: 10rem;
     gap: 5rem;
     margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  img {
     margin-top: 3rem;
   }
 
@@ -21,21 +26,25 @@
     width: 10rem;
 
     // back of card
-    .card-back {
-      display: flex;
-      transition: all ease-in 0.2s;
-      transition-delay: 0.2s;
-      width: 10rem;
-      height: 12rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      position: relative;
-    }
+    .hover-container {
+      width: 3rem;
 
-    .flipped .card-back {
-      transform: rotateY(90deg);
-      transition-delay: 0s;
+      .card-back {
+        display: flex;
+        transform: rotateY(90deg);
+        transition: transform 3s ease, all 3s ease;
+
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      img.flipped {
+        transform: rotateY(90deg);
+        transition: transform 3s ease, all 3s ease;
+        width: 10px;
+      }
     }
   }
 }

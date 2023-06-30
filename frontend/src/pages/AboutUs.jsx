@@ -13,13 +13,13 @@ function AboutUs() {
   const [flipped, setFlipped] = useState(false);
   const handleClick = () => {
     setFlipped(!flipped);
-    const currentPhoto= !flipped ? Arnaud : Point;
+    const currentPhoto = !flipped ? Arnaud : Point;
     setPhoto(currentPhoto);
   };
   const [photo, setPhoto] = useState(Point);
   return (
     <div>
-      <img src={logoAboutUs} alt="logo techAccess" />
+      <img src={logoAboutUs} alt="logo techAccess" className="logoAboutUs " />
       <h2 className="titleAboutUs">Notre équipe de choc</h2>
       <div className="team">
         <img src={Teo} className="photoTeam" alt="Teo" />
@@ -28,10 +28,18 @@ function AboutUs() {
         <img src={Laeti} className="photoTeam" alt="Laeti" />
         <img src={Eric} className="photoTeam" alt="Eric" />
         <img src={Emilie} className="photoTeam" alt="Emilie" />
-        <img className={["card-front","card photoTeam" ,flipped ? "flipped" : ""].join(" ")} onClick={handleClick} src={photo} alt="card front" />
+        <img
+          className={[
+            "card-front",
+            "card photoTeam",
+            flipped ? "flipped" : "",
+          ].join(" ")}
+          onClick={handleClick}
+          src={photo}
+          alt="card front"
+        />
       </div>
     </div>
-
   );
 }
-export default AboutUs ;
+export default AboutUs;
