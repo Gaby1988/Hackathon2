@@ -237,11 +237,17 @@ function AddPhone() {
             >
               next
             </button>
-            <Link to="/phone-recap">
-              <button onClick={calculatePrice} className="btn-calculate">
-                Calculer le prix
-              </button>
-            </Link>
+            {condition == "" ||
+            (condition == undefined && condition == "") ||
+            condition == undefined ? (
+              <></>
+            ) : (
+              <Link to="/phone-recap">
+                <button onClick={calculatePrice} className="btn-calculate">
+                  Calculer le prix
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
