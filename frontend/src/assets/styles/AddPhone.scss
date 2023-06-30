@@ -1,7 +1,6 @@
 .add-phone-container {
   display: flex;
   width: 100%;
-
   .left-side-page-container {
     display: flex;
     flex-direction: column;
@@ -29,11 +28,25 @@
     margin-top: 2rem;
     padding-left: 6rem;
 
-    .footerQuestions button{
+    .footerQuestions button {
       height: 2rem;
       width: 5rem;
       margin-left: 1rem;
-      margin-top: 2rem; 
+      margin-top: 2rem;
     }
+  }
+}
+
+.btn-calculate {
+  background-color: $app-primary-font-color;
+  color: $app-color-button;
+  border-style: none;
+  border: solid 2px $app-primary-font-color;
+  border-radius: 6px;
+  width: 15rem;
+  height: 4rem;
+  font: {
+    size: $font-size-text-tablet;
+    family: $app-primary-font;
   }
 }

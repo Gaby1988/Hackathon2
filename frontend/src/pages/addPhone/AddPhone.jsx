@@ -219,7 +219,8 @@ function AddPhone() {
         </div>
         <div className="containerQuestionsAndStep">
           <div className="footerQuestions">
-            <button className="primary-button"
+            <button
+              className="primary-button"
               disabled={activeIndex === 0}
               onClick={() => {
                 setActiveIndex((currPage) => currPage - 1);
@@ -227,7 +228,8 @@ function AddPhone() {
             >
               prev
             </button>
-            <button className="primary-button"
+            <button
+              className="primary-button"
               disabled={activeIndex === formTitle.length - 1}
               onClick={() => {
                 setActiveIndex((currPage) => currPage + 1);
@@ -235,7 +237,11 @@ function AddPhone() {
             >
               next
             </button>
-            <button onClick={calculatePrice}>Calculer le prix</button>
+            <Link to="/phone-recap">
+              <button onClick={calculatePrice} className="btn-calculate">
+                Calculer le prix
+              </button>
+            </Link>
           </div>
         </div>
       </div>

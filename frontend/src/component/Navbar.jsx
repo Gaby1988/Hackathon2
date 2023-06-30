@@ -3,12 +3,11 @@ import { IsDesktopContext } from "../contexts/IsDesktopContext";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/pictures/Logo.png";
 
-
 function Navbar() {
   const navigate = useNavigate();
   const { isAdmin, setIsAdmin } = useContext(IsDesktopContext);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+
   const handleLogout = () => {
     navigate("/login");
     setIsLoggedIn(false);
@@ -28,7 +27,7 @@ function Navbar() {
             </Link>
           )}
           <>
-            <Link to="/addPhone">
+            <Link to="/evaluation">
               <li>Estimer des articles</li>
             </Link>
             <Link to="/list-article">
@@ -36,9 +35,7 @@ function Navbar() {
             </Link>
             {!isAdmin ? (
               <Link to="/login">
-                <li className="titleConnection">
-                  Connexion
-                </li>
+                <li className="titleConnection">Connexion</li>
               </Link>
             ) : (
               <Link to="/">
