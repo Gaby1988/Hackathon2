@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function EvalModel({ brand, model, setBrand, setModel }) {
   const [showModelOptions, setShowModelOptions] = useState(false);
@@ -15,8 +15,14 @@ function EvalModel({ brand, model, setBrand, setModel }) {
   return (
     <div>
       <div className="inputEvalModel">
-        <label className="titleEvalModel">Quelle est la marque du téléphone ?</label>
-        <select className="inputEvaluation" value={brand} onChange={handleBrandChange}>
+        <label className="titleEvalModel">
+          Quelle est la marque du téléphone ?
+        </label>
+        <select
+          className="inputEvaluation"
+          value={brand}
+          onChange={handleBrandChange}
+        >
           <option value="">Sélectionner une marque</option>
           <option value="Apple">Apple</option>
           <option value="Samsung">Samsung</option>
@@ -27,8 +33,14 @@ function EvalModel({ brand, model, setBrand, setModel }) {
       </div>
       {showModelOptions ? (
         <div className="inputEvalModel">
-          <label className="titleEvalModel">Quel est le modèle du téléphone ?</label>
-          <select className="inputEvaluation" value={model} onChange={(e) => setModel(e.target.value)}>
+          <label className="titleEvalModel">
+            Quel est le modèle du téléphone ?
+          </label>
+          <select
+            className="inputEvaluation"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+          >
             <option value="">Sélectionner un modèle</option>
             {brand === "Apple" && (
               <>
@@ -62,7 +74,9 @@ function EvalModel({ brand, model, setBrand, setModel }) {
         </div>
       ) : (
         <div className="inputEvalModel">
-          <label className="titleEvalModel">Quel est le modèle du téléphone ?</label>
+          <label className="titleEvalModel">
+            Quel est le modèle du téléphone ?
+          </label>
           <select className="inputEvaluation" value={model} disabled>
             <option value="">Sélectionner un modèle</option>
           </select>
